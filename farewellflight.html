@@ -3,49 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>caesar cipher</title>
+    <title>Command Prompt Typing Effect</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #1c1c1c;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
+            background-color: black;
+            color: lime;
+            font-family: monospace;
+            font-size: 16px;
+            padding: 20px;
         }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        h1 {
-            animation: fadeIn 1.5s ease-in;
+        .line {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1 id="fadeText">Mkkz ngy znk qke zu znk tkdz irak!</h1>
+    <div id="console">
+        <div class="line">C:\> echo It came too soon...</div>
+        <div class="line">C:\> dir</div>
+        <div class="line">C:\> ping 127.0.0.1</div>
+        <div class="line">C:\> exit</div>
     </div>
 
-    <audio id="audio" src="collectable-videogame-sound-compilation-31233 (mp3cut.net).mp3" preload="auto"></audio>
-
     <script>
-        var audio = document.getElementById("audio");
-        audio.playbackRate = 0.75; // Slow down the audio to 0.75x
+        document.addEventListener("DOMContentLoaded", function() {
+            const lines = document.querySelectorAll(".line");
+            let currentLine = 0;
 
-        var fadeText = document.getElementById("fadeText");
-        fadeText.addEventListener("animationstart", function() {
-            audio.play();
+            function typeLine(line) {
+                line.style.display = "block";
+                const text = line.textContent;
+                line.textContent = "";
+                let i = 0;
+
+                function typeChar() {
+                    if (i < text.length) {
+                        line.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(typeChar, 50); // Typing speed (50ms per character)
+                    } else {
+                        currentLine++;
+                        if (currentLine < lines.length) {
+                            setTimeout(() => typeLine(lines[currentLine]), 2000); // Pause between lines (2000ms)
+                        }
+                    }
+                }
+
+                typeChar();
+            }
+
+            typeLine(lines[currentLine]);
         });
     </script>
 </body>
