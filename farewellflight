@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caesar cipher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            animation: fadeIn 1.5s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="fadeText">Mkkz ngy znk qke zu znk tkdz irak!</h1>
+    </div>
+
+    <audio id="audio" src="collectable-videogame-sound-compilation-31233 (mp3cut.net).mp3" preload="auto"></audio>
+
+    <script>
+        var audio = document.getElementById("audio");
+        audio.playbackRate = 0.75; // Slow down the audio to 0.75x
+
+        var fadeText = document.getElementById("fadeText");
+        fadeText.addEventListener("animationstart", function() {
+            audio.play();
+        });
+    </script>
+</body>
+</html>
