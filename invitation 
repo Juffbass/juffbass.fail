@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image with Audio</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .hidden {
+            display: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://l.top4top.io/p_3068igyvy0.jpg" alt="Centered Image">
+    <audio id="audio" class="hidden" controls>
+        <source src="https://od.lk/s/ODVfNTY0MTA4Mzhf/morse%20%281%29.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const audio = document.getElementById("audio");
+
+            setTimeout(() => {
+                audio.classList.remove("hidden");
+            }, 3000); // Show audio controls after 3 seconds
+        });
+    </script>
+</body>
+</html>
