@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitation</title>
+    <title>Command Prompt</title>
     <style>
         body {
             background-color: black;
@@ -19,13 +19,16 @@
 </head>
 <body>
     <div id="console">
-        <div class="line">C:\> echo "Farewell flight" </div>
+        <div class="line">C:\> echo "Farewell Flight" </div>
         <div class="line">C:\> dir JUFFBASS_ORIGINALS</div>
-        <div class="line">C:\> ping 127.0.0.1</div>
-        <div class="line">C:\> exit. . . </div>
+        <div class="line">C:\> date 27 - 05 - 2024 </div>
+        <div class="line">C:\> md ALBUM_FILES </div>
+<div class="line">C:\> selecting . . .  </div>
     </div>
+<div class="line">C:\> FAREWELL_FLIGHT found </div>
+<div class="line">C:\> redirecting. . . </div>
 
-    <script>
+        <script>
         document.addEventListener("DOMContentLoaded", function() {
             const lines = document.querySelectorAll(".line");
             let currentLine = 0;
@@ -45,6 +48,10 @@
                         currentLine++;
                         if (currentLine < lines.length) {
                             setTimeout(() => typeLine(lines[currentLine]), 2000); // Pause between lines (2000ms)
+                        } else {
+                            setTimeout(() => {
+                                window.location.href = "https://example.com"; // Redirect to new page
+                            }, 2000); // Pause before redirecting (2000ms)
                         }
                     }
                 }
