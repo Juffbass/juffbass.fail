@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Command Prompt</title>
+    <link rel="icon" href="https://l.top4top.io/p_3068igyvy0.jpg" type="image/x-icon">
     <style>
         body {
             background-color: black;
@@ -23,12 +24,12 @@
         <div class="line">C:\> dir JUFFBASS_ORIGINALS</div>
         <div class="line">C:\> date 27 - 05 - 2024 </div>
         <div class="line">C:\> md ALBUM_FILES </div>
-<div class="line">C:\> selecting . . .  </div>
+        <div class="line">C:\> selecting . . .  </div>
     </div>
-<div class="line">C:\> FAREWELL_FLIGHT found </div>
-<div class="line">C:\> redirecting. . . </div>
+    <div class="line">C:\> FAREWELL_FLIGHT found </div>
+    <div class="line">C:\> redirecting. . . </div>
 
-        <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
             const lines = document.querySelectorAll(".line");
             let currentLine = 0;
@@ -43,7 +44,11 @@
                     if (i < text.length) {
                         line.textContent += text.charAt(i);
                         i++;
-                        setTimeout(typeChar, 50); // Typing speed (50ms per character)
+                        let delay = 50; // Default typing speed
+                        if (currentLine === 2 || currentLine === 3 || currentLine === 5) {
+                            delay = 25; // Faster typing speed for lines 3, 4, and 6 (0-indexed)
+                        }
+                        setTimeout(typeChar, delay);
                     } else {
                         currentLine++;
                         if (currentLine < lines.length) {
