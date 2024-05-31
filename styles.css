@@ -11,10 +11,11 @@ header {
     align-items: center;
     background-color: #222;
     padding: 1em 2em;
+    justify-content: space-between; /* Pushes navigation to the right */
 }
 
 .logo img {
-    height: 50px;
+    height: 70px; /* Increases logo size */
     margin-right: auto;
 }
 
@@ -26,7 +27,8 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px; /* Makes tabs smaller */
+    font-size: 0.9em; /* Adjusts tab size */
 }
 
 nav ul li a {
