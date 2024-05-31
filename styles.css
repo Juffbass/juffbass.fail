@@ -9,13 +9,17 @@ body {
 header {
     display: flex;
     align-items: center;
-    background-color: #222;
+    background-color: #111;
     padding: 1em 2em;
-    justify-content: space-between; /* Pushes navigation to the right */
+    justify-content: space-between; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo img {
-    height: 50px; /* Increases logo size */
+    height: 50px; 
     margin-right: auto;
 }
 
@@ -27,8 +31,8 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px; /* Makes tabs smaller */
-    font-size: 0.9em; /* Adjusts tab size */
+    margin: 0 10px; 
+    font-size: 0.9em; 
 }
 
 nav ul li a {
@@ -41,18 +45,43 @@ nav ul li a:hover {
     color: #f4f4f4;
 }
 
+#home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(main.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+#home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+#home h2, #home p {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
 section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #111;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    padding: 60px 20px;
+    margin: 0;
+    background-color: #000;
 }
 
 footer {
     text-align: center;
     padding: 1em 0;
-    background-color: #222;
+    background-color: #111;
     color: white;
 }
 
