@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
-    overflow: auto; /* Allow scrolling */
+    overflow-y: scroll; /* Ensure scrollbar is always present */
 }
 
 header {
@@ -58,11 +58,10 @@ nav ul li a:hover {
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     position: relative;
-    overflow: hidden;
 }
 
 #home img {
-    height: 100%;
+    height: 100vh;
     width: auto;
     object-fit: cover;
 }
