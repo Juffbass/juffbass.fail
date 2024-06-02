@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
-    overflow-y: scroll; /* Ensure scrollbar is always present */
+    overflow: auto; /* Allow scrolling */
 }
 
 header {
@@ -58,10 +58,11 @@ nav ul li a:hover {
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     position: relative;
+    overflow: hidden;
 }
 
 #home img {
-    height: 100vh;
+    height: 100%;
     width: auto;
     object-fit: cover;
 }
@@ -111,35 +112,36 @@ form button:hover {
     background-color: #666;
 }
 
-/* Custom Scrollbar for the entire website */
-body, html {
-    overflow: hidden; /* Hide default scrollbar */
+/* Custom Scrollbar for the scroll box */
+.scroll-box {
+    max-height: 300px;
+    overflow: hidden; /* Hide the scrollbar by default */
 }
 
-body:hover, html:hover {
-    overflow: auto; /* Show scrollbar on hover */
+.scroll-box:hover {
+    overflow-y: auto; /* Show scrollbar on hover */
 }
 
-body::-webkit-scrollbar, html::-webkit-scrollbar {
+.scroll-box::-webkit-scrollbar {
     width: 10px;
 }
 
-body::-webkit-scrollbar-track, html::-webkit-scrollbar-track {
+.scroll-box::-webkit-scrollbar-track {
     background: #111; /* Track color */
 }
 
-body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb {
+.scroll-box::-webkit-scrollbar-thumb {
     background-color: #444; /* Handle color */
     border-radius: 10px;
     border: 2px solid #111; /* Padding around handle */
 }
 
-body::-webkit-scrollbar-thumb:hover, html::-webkit-scrollbar-thumb:hover {
+.scroll-box::-webkit-scrollbar-thumb:hover {
     background: #666; /* Handle color on hover */
 }
 
 /* For Firefox */
-body, html {
+.scroll-box {
     scrollbar-width: thin;
     scrollbar-color: #444 #111;
 }
