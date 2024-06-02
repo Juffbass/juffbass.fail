@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
+    overflow-y: scroll; /* Ensure scrollbar is always present */
 }
 
 header {
@@ -11,7 +12,7 @@ header {
     align-items: center;
     background-color: #111;
     padding: 1em 2em;
-    justify-content: space-between; 
+    justify-content: space-between;
     position: fixed;
     width: 100%;
     top: 0;
@@ -19,7 +20,7 @@ header {
 }
 
 .logo img {
-    height: 50px; 
+    height: 70px;
 }
 
 nav ul {
@@ -30,8 +31,8 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px; 
-    font-size: 0.9em; 
+    margin: 0 10px;
+    font-size: 0.9em;
 }
 
 nav ul li a {
@@ -61,7 +62,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -113,47 +114,36 @@ form button {
 form button:hover {
     background-color: #666;
 }
-/* Custom Scrollbar */
-.scroll-box {
-    width: 100%;
-    height: 400px; 
-    overflow: hidden;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #111;
-    color: #fff;
-    border-radius: 8px;
-    margin: 20px 0;
-    position: relative;
+
+/* Custom Scrollbar for the entire website */
+body, html {
+    overflow: hidden; /* Hide default scrollbar */
 }
 
-.scroll-box:hover {
-    overflow-y: auto; 
+body:hover, html:hover {
+    overflow: auto; /* Show scrollbar on hover */
 }
 
-.scroll-box::-webkit-scrollbar {
+body::-webkit-scrollbar, html::-webkit-scrollbar {
     width: 10px;
 }
 
-.scroll-box::-webkit-scrollbar-track {
-    background: #111; 
+body::-webkit-scrollbar-track, html::-webkit-scrollbar-track {
+    background: #111; /* Track color */
 }
 
-.scroll-box::-webkit-scrollbar-thumb {
-    background-color: #444;
+body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb {
+    background-color: #444; /* Handle color */
     border-radius: 10px;
-    border: 2px solid #111; 
+    border: 2px solid #111; /* Padding around handle */
 }
 
-.scroll-box::-webkit-scrollbar-thumb:hover {
-    background: #666; 
+body::-webkit-scrollbar-thumb:hover, html::-webkit-scrollbar-thumb:hover {
+    background: #666; /* Handle color on hover */
+}
 
 /* For Firefox */
-.scroll-box {
+body, html {
     scrollbar-width: thin;
-    scrollbar-color: #444 #111;
-}
-
-.scroll-box:hover {
     scrollbar-color: #444 #111;
 }
