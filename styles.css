@@ -1,73 +1,82 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #121212;
-  color: #e0e0e0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
 }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    height: 50px;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    padding: 0;
 }
 
 nav ul li {
-  margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
 }
 
 nav ul li a:hover {
-  color: #888;
+    background-color: #333;
+    border-radius: 5px;
 }
 
-.banner {
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
+/* Home Page */
+.background-image {
+    background: url('images/main.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
 }
 
-.banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Content Pages */
+.content {
+    margin-top: 70px;
+    padding: 20px;
 }
 
-.scroll-box {
-  max-height: 500px;
-  overflow-y: hidden;
-  padding: 20px;
-  background-color: #1e1e1e;
-  margin: 20px;
-  border: 1px solid #444;
-  border-radius: 5px;
-}
-
-/* Custom scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  background-color: transparent;
+    width: 0px;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 5px;
+    background: #333;
+    border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+body:hover ::-webkit-scrollbar {
+    width: 10px;
+}
+
+body:hover ::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
 }
