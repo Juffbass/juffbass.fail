@@ -1,14 +1,11 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+window.addEventListener("DOMContentLoaded", () => {
+  const scrollBox = document.querySelector(".scroll-box");
 
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const message = event.target.message.value;
+  scrollBox.addEventListener("mouseenter", () => {
+    scrollBox.style.overflowY = "auto";
+  });
 
-    if(name && email && message) {
-        alert('Message sent successfully!');
-        event.target.reset();
-    } else {
-        alert('Please fill in all fields.');
-    }
+  scrollBox.addEventListener("mouseleave", () => {
+    scrollBox.style.overflowY = "hidden";
+  });
 });
