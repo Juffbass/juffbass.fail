@@ -1,82 +1,51 @@
-/* General Styles */
-body {
+/* Basic Reset */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    overflow: hidden; /* Remove default scroll */
+}
+
+/* Navigation Bar Styling */
 nav {
     display: flex;
     align-items: center;
-    background-color: #111;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 nav .logo {
-    height: 50px;
+    height: 40px;
+    margin-right: auto;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    margin-left: auto;
-    padding: 0;
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin-left: 2rem;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
-    padding: 10px 15px;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #333;
-    border-radius: 5px;
+    color: #b3b3b3;
 }
 
-/* Home Page */
-.background-image {
-    background: url('images/main.png') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-}
-
-/* Content Pages */
-.content {
-    margin-top: 70px;
-    padding: 20px;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #333;
-    border-radius: 5px;
-}
-
-body:hover ::-webkit-scrollbar {
-    width: 10px;
-}
-
-body:hover ::-webkit-scrollbar-thumb {
-    background: #666;
-}
-
-/* Dark Mode */
-body.dark-mode {
-    background-color: #000;
-    color: #fff;
-}
+/* Home Page Background Image */
+.home-bg {
+    background:
