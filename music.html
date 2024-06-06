@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuffBass - Originals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+    <nav>
+        <img src="juffbass.png" alt="Logo" class="logo">
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="autobio.html">About</a></li>
+            <li><a href="music.html">Originals</a></li>
+            <li><a href="youtube.html">YouTube</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1>JuffBass Originals</h1>
+        <div class="albums">
+            <div class="album" data-album="album1">
+                <img src="album1.jpg" alt="Album 1">
+                <p>Emptiness Reigns</p>
+            </div>
+            <div class="album" data-album="album2">
+                <img src="album2.jpg" alt="Album 2">
+                <p>Monolith</p>
+            </div>
+            <div class="album" data-album="album3">
+                <img src="album3.jpg" alt="Album 3">
+                <p>Farewell Flight</p>
+            </div>
+            <div class="album" data-album="album4">
+                <img src="album4.jpg" alt="Album 4">
+                <p>Hiraeth</p>
+            </div>
+            <div class="album" data-album="album5">
+                <img src="album5.jpg" alt="Album 5">
+                <p>Evenings On a Balcony</p>
+            </div>
+            <div class="album" data-album="album6">
+                <img src="album6.jpg" alt="Album 6">
+                <p>Moments With Birds</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Album Pop-up Template -->
+    <div id="album-popup" class="popup hidden">
+        <div class="popup-content">
+            <button class="close-btn">&times;</button>
+            <img id="popup-album-cover" src="" alt="Album Cover">
+            <div id="popup-album-info" class="popup-info">
+                <!-- Album information goes here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
