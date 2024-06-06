@@ -51,6 +51,31 @@ nav ul li a:hover {
     background: url('MY.png') no-repeat center center/cover;
     height: calc(100vh - 70px); /* Adjust based on navbar height */
     width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 50px;
+}
+
+/* Countdown Box Styling */
+.countdown-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#countdown span {
+    font-weight: bold;
 }
 
 /* Content Styling */
