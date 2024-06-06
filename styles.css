@@ -49,3 +49,16 @@ nav ul li a:hover {
 /* Home Page Background Image */
 .home-bg {
     background:
+/* Content Styling */
+.content {
+    padding: 2rem;
+}
+
+/* Adjust Scrollbar Visibility */
+body {
+    overflow: auto;
+}
+
+body:hover ::-webkit-scrollbar {
+    display: block;
+}
