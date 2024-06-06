@@ -20,27 +20,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const albumData = {
         album1: {
-            cover: 'album1.png',
+            cover: 'album1.jpg',
             info: 'Detailed information about Album 1.'
         },
         album2: {
-            cover: 'album2.png',
+            cover: 'album2.jpg',
             info: 'Detailed information about Album 2.'
         },
         album3: {
-            cover: 'album3.png',
+            cover: 'album3.jpg',
             info: 'Detailed information about Album 3.'
         },
         album4: {
-            cover: 'album4.png',
+            cover: 'album4.jpg',
             info: 'Detailed information about Album 4.'
         },
         album5: {
-            cover: 'album5.png',
+            cover: 'album5.jpg',
             info: 'Detailed information about Album 5.'
         },
         album6: {
-            cover: 'album6.png',
+            cover: 'album6.jpg',
             info: 'Detailed information about Album 6.'
         },
     };
