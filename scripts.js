@@ -6,11 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const minutesSpan = document.getElementById('minutes');
     const secondsSpan = document.getElementById('seconds');
     
-    const targetDate = new Date('June 9, 2024 22:00:00 CET').getTime();
+    // Target date: June 9, 2024 22:00:00 CET
+    const targetDate = new Date(Date.UTC(2024, 5, 9, 20, 0, 0)); // 22:00 CET is 20:00 UTC
 
     function updateCountdown() {
         const now = new Date().getTime();
         const difference = targetDate - now;
+
+        if (difference < 0) {
+            clearInterval(interval);
+            countdown.innerHTML = 'Myrkur is out now!';
+            return;
+        }
 
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
         const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -22,15 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
         minutesSpan.textContent = minutes;
         secondsSpan.textContent = seconds;
 
-        if (difference < 0) {
-            clearInterval(interval);
-            countdown.innerHTML = 'Myrkur is out now!';
-        }
+        console.log('Countdown Updated:', { days, hours, minutes, seconds });
     }
 
     const interval = setInterval(updateCountdown, 1000);
     updateCountdown(); // Initial call to set values immediately
-
+});
 
 //scrollbox
 window.addEventListener("DOMContentLoaded", () => {
