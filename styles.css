@@ -29,6 +29,7 @@ nav .logo {
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -66,12 +67,15 @@ nav ul li a:hover {
     text-align: center;
     color: #ffffff;
     font-size: 1.5rem;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 #countdown {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 #countdown span {
@@ -232,4 +236,66 @@ body:hover ::-webkit-scrollbar {
 .restriction-container button:hover {
     background-color: #444;
     color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .home-bg {
+        height: calc(100vh - 60px); /* Adjust based on navbar height */
+    }
+
+    .countdown-box {
+        padding: 15px;
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+
+    #countdown {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .album img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .popup-content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .countdown-box {
+        padding: 10px;
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .album img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .popup-content {
+        padding: 0.5rem;
+    }
 }
