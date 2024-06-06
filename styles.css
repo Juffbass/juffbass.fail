@@ -49,7 +49,7 @@ nav ul li a:hover {
 
 /* Home Page Background Image */
 .home-bg {
-    background: url('MY.png') no-repeat center center/cover;
+    background: url('main.png') no-repeat center center/cover;
     height: calc(100vh - 70px); /* Adjust based on navbar height */
     width: 100%;
     position: relative;
@@ -62,11 +62,11 @@ nav ul li a:hover {
 /* Countdown Box Styling */
 .countdown-box {
     background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    padding: 10px; /* Decreased padding for smaller screens */
     border-radius: 10px;
     text-align: center;
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Decreased font size for smaller screens */
     max-width: 90%;
     margin: 0 auto;
 }
@@ -256,8 +256,8 @@ body:hover ::-webkit-scrollbar {
     }
 
     .countdown-box {
-        padding: 15px;
-        font-size: 1.2rem;
+        padding: 10px;
+        font-size: 1rem; /* Further decreased font size for smaller screens */
         max-width: 100%;
     }
 
