@@ -74,3 +74,16 @@ nav ul li a:hover {
 body:hover ::-webkit-scrollbar {
     display: block;
 }
+/* Content Styling */
+.content {
+    padding: 2rem;
+}
+
+/* Adjust Scrollbar Visibility */
+body {
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+body:hover ::-webkit-scrollbar {
+    display: block;
+}
