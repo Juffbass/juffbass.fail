@@ -1,3 +1,38 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Countdown Timer Logic
+    const countdown = document.getElementById('countdown');
+    const daysSpan = document.getElementById('days');
+    const hoursSpan = document.getElementById('hours');
+    const minutesSpan = document.getElementById('minutes');
+    const secondsSpan = document.getElementById('seconds');
+    
+    const targetDate = new Date('June 9, 2024 22:00:00 CET').getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        daysSpan.textContent = days;
+        hoursSpan.textContent = hours;
+        minutesSpan.textContent = minutes;
+        secondsSpan.textContent = seconds;
+
+        if (difference < 0) {
+            clearInterval(interval);
+            countdown.innerHTML = 'Myrkur is out now!';
+        }
+    }
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown(); // Initial call to set values immediately
+
+
+//scrollbox
 window.addEventListener("DOMContentLoaded", () => {
   const scrollBox = document.querySelector(".scroll-box");
 
@@ -10,7 +45,8 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-/* Popup album info*/
+
+    // Album Popup Logic
 document.addEventListener('DOMContentLoaded', () => {
     const albums = document.querySelectorAll('.album');
     const popup = document.getElementById('album-popup');
