@@ -49,7 +49,7 @@ nav ul li a:hover {
 
 /* Home Page Background Image */
 .home-bg {
-    background: url('main.png') no-repeat center center/cover;
+    background: url('MY.png') no-repeat center center/cover;
     height: calc(100vh - 70px); /* Adjust based on navbar height */
     width: 100%;
     position: relative;
