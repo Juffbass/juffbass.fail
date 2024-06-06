@@ -62,11 +62,11 @@ nav ul li a:hover {
 /* Countdown Box Styling */
 .countdown-box {
     background: rgba(0, 0, 0, 0.8);
-    padding: 10px; /* Decreased padding for smaller screens */
+    padding: 20px;
     border-radius: 10px;
     text-align: center;
     color: #ffffff;
-    font-size: 1.2rem; /* Decreased font size for smaller screens */
+    font-size: 1.5rem;
     max-width: 90%;
     margin: 0 auto;
 }
@@ -240,41 +240,13 @@ body:hover ::-webkit-scrollbar {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 1rem;
-    }
-
-    .home-bg {
-        height: calc(100vh - 60px); /* Adjust based on navbar height */
-    }
-
+@media (max-width: 576px) {
     .countdown-box {
-        padding: 10px;
-        font-size: 1rem; /* Further decreased font size for smaller screens */
-        max-width: 100%;
-    }
-
-    #countdown {
-        justify-content: space-around;
+        padding: 10px; /* Decreased padding for smaller screens */
+        font-size: 1.2rem; /* Decreased font size for smaller screens */
     }
 
     #countdown span {
         flex-basis: 30%; /* Adjusted */
-    }
-
-    .album img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .popup-content {
-        padding: 1rem;
     }
 }
