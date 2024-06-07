@@ -55,7 +55,7 @@ nav ul li a:hover {
 
 .tic-tac-toe-table th, .tic-tac-toe-table td {
     border: 2px solid #ffffff;
-    width: 25%; /* Divide table into 4 equal parts */
+    width: 33.33%; /* Divide table into 3 equal parts */
     height: 120px;
     text-align: center;
     font-size: 1.2rem;
@@ -68,6 +68,16 @@ nav ul li a:hover {
 
 .tic-tac-toe-table td {
     background-color: #2b2b2b;
+}
+
+/* Styling for the Tic-Tac-Toe Table */
+.tic-tac-toe-table td:nth-child(3n-1),
+.tic-tac-toe-table td:nth-child(3n) {
+    border-right: none;
+}
+
+.tic-tac-toe-table td:nth-last-child(-n+3) {
+    border-bottom: none;
 }
 
 /* Adjustments for Responsive Design */
