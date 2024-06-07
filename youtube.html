@@ -24,12 +24,13 @@
             Welcome to JuffBass's official YouTube channel! Here you'll find a collection of bass covers, original compositions, tutorials, and much more. Join our growing community of bass enthusiasts and stay updated with the latest content and live interactions.
         </p>
         <div class="table-container">
-            <table>
+            <table class="tic-tac-toe-table">
                 <thead>
                     <tr>
                         <th>Subscribers</th>
                         <th>Likes</th>
                         <th>Videos</th>
+                        <th>New Data</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +38,7 @@
                         <td id="subscribers">0</td>
                         <td id="likes">0</td>
                         <td id="videos">0</td>
+                        <td>0</td>
                     </tr>
                 </tbody>
             </table>
@@ -67,15 +69,19 @@
             let likesTarget = 251000;
             let videosTarget = 320;
 
+            // Find the maximum target value
+            let maxTarget = Math.max(subscribersTarget, likesTarget, videosTarget);
+
+            // Calculate animation duration based on the maximum target value
+            let duration = 3000; // Default duration
+            if (maxTarget > 0) {
+                duration = Math.floor(3000 * maxTarget / 100000); // Adjusted duration based on the maximum target value
+            }
+
             // Get elements to animate
             let subscribersElement = document.getElementById('subscribers');
             let likesElement = document.getElementById('likes');
             let videosElement = document.getElementById('videos');
-
-            // Calculate average time for all counters to finish
-            let totalTargets = subscribersTarget + likesTarget + videosTarget;
-            let averageTime = 1500 * 3; // Default duration for each counter
-            let duration = Math.floor(averageTime / totalTargets);
 
             // Animate counting for each element with synchronized finish time
             animateCount(subscribersElement, 0, subscribersTarget, duration);
