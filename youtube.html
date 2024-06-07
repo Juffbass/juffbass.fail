@@ -3,92 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JuffBassz - YouTube</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: #333;
-            color: white;
-            padding: 10px 0;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        .intro {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .intro-image {
-            width: 300px;
-            height: auto;
-            margin-right: 20px;
-        }
-
-        .intro-text {
-            flex: 1;
-        }
-
-        .stats-grid {
-            display: flex;
-            justify-content: center;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            gap: 10px;
-            width: 300px;
-            height: 300px;
-        }
-
-        .grid-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #333;
-            font-size: 24px;
-            font-weight: bold;
-            background-color: #f9f9f9;
-        }
-    </style>
+    <title>JuffBass - YouTube</title>
+    <link rel="stylesheet" href="styles_yt.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="main.html">Home</a></li>
                 <li><a href="autobio.html">About</a></li>
                 <li><a href="music.html">Originals</a></li>
                 <li><a href="youtube.html">YouTube</a></li>
@@ -96,58 +18,49 @@
         </nav>
     </header>
     <main>
-        <section class="intro">
-            <img src="Juff2.jpg" alt="Juffchannel" class="intro-image">
-            <p class="intro-text">This is a paragraph of text that wraps beside the image. Describe your YouTube channel or any relevant information here.</p>
+        <h1>My YouTube Channel</h1>
+        <section class="channel-intro">
+            <p>Welcome to JuffBass YouTube channel! Here, you'll find a collection of the latest bass covers, tutorials, and behind-the-scenes videos. Stay tuned and subscribe for more musical content.</p>
         </section>
-        <section class="stats-grid">
-            <div class="grid-container">
-                <div class="grid-item" id="slot1"></div>
-                <div class="grid-item" id="slot2"></div>
-                <div class="grid-item" id="slot3"></div>
-                <div class="grid-item" id="slot4"></div>
-                <div class="grid-item" id="slot5"></div>
-                <div class="grid-item" id="slot6"></div>
-                <div class="grid-item" id="slot7"></div>
-                <div class="grid-item" id="slot8"></div>
-                <div class="grid-item" id="slot9"></div>
+        <section class="video-section">
+            <h2>Featured Video</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tX0ucw4cblo" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
+        <section class="video-carousel">
+            <h2>Latest Videos</h2>
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <iframe width="280" height="158" src="https://www.youtube.com/embed/uXq77AE8-aM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-item">
+                    <iframe width="280" height="158" src="https://www.youtube.com/embed/UIqm-dLcojE" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-item">
+                    <iframe width="280" height="158" src="https://www.youtube.com/embed/iZ5bZotdYrA" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-item">
+                    <iframe width="280" height="158" src="https://www.youtube.com/embed/nLQbrMhVYgY" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-item">
+                    <iframe width="280" height="158" src="https://www.youtube.com/embed/IrxsLi1wiNI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-item">
+                    <iframe width="280" height="158" src="https://www.youtube.com/embed/5euSxqhP0qM" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <section class="video-section">
+            <h2>Full Playlist</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLda-GhTIiuF3QLiR9-O87Bjij1qu1IaS4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="channel-link">
+            <h2>Visit My YouTube Channel</h2>
+            <a href="https://youtube.com/@juffbass?si=-1rqXdGiDVozriVk" target="_blank">Go to Channel</a>
+        </section>
     </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const data = [
-                { id: "slot1", label: "Number of Videos", value: 120 },
-                { id: "slot2", label: "Subscribers", value: 1500 },
-                { id: "slot3", label: "Total Views", value: 25000 },
-                { id: "slot4", label: "Average Watch Time (min)", value: 3500 },
-                { id: "slot5", label: "Comments", value: 500 },
-                { id: "slot6", label: "Shares", value: 750 },
-                { id: "slot7", label: "Playlists", value: 80 },
-                { id: "slot8", label: "Live Streams", value: 60 },
-                { id: "slot9", label: "Collaborations", value: 15 }
-            ];
-
-            data.forEach(item => {
-                const element = document.getElementById(item.id);
-                element.innerText = item.label + ": 0";
-                countUp(element, item.value, 10000);
-            });
-        });
-
-        function countUp(element, endValue, duration) {
-            let startValue = 0;
-            const increment = endValue / (duration / 10);
-
-            const timer = setInterval(() => {
-                startValue += increment;
-                if (startValue >= endValue) {
-                    clearInterval(timer);
-                    startValue = endValue;
-                }
-                element.innerText = element.innerText.split(':')[0] + ": " + Math.floor(startValue);
-            }, 10);
-        }
-    </script>
 </body>
 </html>
