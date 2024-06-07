@@ -6,7 +6,78 @@
     <title>JuffBass - YouTube</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            font-family: 'Open Sans', sans-serif;
+            color: #ffffff;
+        }
+
+        .content img {
+            max-width: 300px;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+        }
+
+        .content p {
+            max-width: 600px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .data-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .data-item {
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .data-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .data-item p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Animation */
+        .counter {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            animation: count-up 10s ease-in-out forwards;
+        }
+
+        @keyframes count-up {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .content p {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -19,74 +90,60 @@
         </ul>
     </nav>
     <div class="content">
-        <img src="Juff2.jpg" alt="JuffBass" class="content-image">
+        <img src="Juff2.png" alt="JuffBass YouTube">
         <p>
-            Welcome to JuffBass's official YouTube channel! Here you'll find a collection of bass covers, original compositions, tutorials, and much more. Join our growing community of bass enthusiasts and stay updated with the latest content and live interactions.
+            JuffBass's YouTube channel is dedicated to providing high-quality bass guitar tutorials, covers, and original compositions. With a focus on sharing his passion for music and helping others learn and improve their skills, JuffBass delivers engaging and informative content for bass enthusiasts of all levels.
         </p>
-        <div class="table-container">
-            <table class="tic-tac-toe-table">
-                <thead>
-                    <tr>
-                        <th>Subscribers</th>
-                        <th>Likes</th>
-                        <th>Videos</th>
-                        <th>New Data</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="subscribers">0</td>
-                        <td id="likes">0</td>
-                        <td id="videos">0</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="data-container">
+            <div class="data-item">
+                <h3>Videos Uploaded</h3>
+                <p class="counter" id="videosCounter">0</p>
+            </div>
+            <div class="data-item">
+                <h3>Subscribers</h3>
+                <p class="counter" id="subscribersCounter">0</p>
+            </div>
+            <div class="data-item">
+                <h3>Likes</h3>
+                <p class="counter" id="likesCounter">0</p>
+            </div>
+            <div class="data-item">
+                <h3>Views</h3>
+                <p class="counter" id="viewsCounter">0</p>
+            </div>
+            <!-- Add more data items as needed -->
         </div>
     </div>
 
-    <!-- JavaScript for Counter Effect -->
+    <!-- JavaScript for counting up -->
     <script>
-       // Function to animate counting from 0 to a target number with a specified duration
-function animateCount(element, start, end, duration) {
-    let range = end - start;
-    let current = start;
-    let increment = end > start ? 1 : -1;
-    let stepTime = Math.abs(Math.floor(duration / range));
-    let timer = setInterval(function() {
-        current += increment;
-        element.textContent = current;
-        if (current === end) {
-            clearInterval(timer);
+        // Function to animate counting up from 0 to a target number
+        function animateCount(element, target, duration) {
+            let start = 0;
+            const step = (timestamp) => {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                element.textContent = Math.floor((target / duration) * progress);
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    element.textContent = target;
+                }
+            };
+            window.requestAnimationFrame(step);
         }
-    }, stepTime);
-}
 
-// Trigger counter animation when the page is loaded
-window.addEventListener('load', function() {
-    // Set target numbers
-    let subscribersTarget = 43000;
-    let likesTarget = 251000;
-    let videosTarget = 320;
+        // Call the function for each counter element
+        const videosCounter = document.getElementById('videosCounter');
+        const subscribersCounter = document.getElementById('subscribersCounter');
+        const likesCounter = document.getElementById('likesCounter');
+        const viewsCounter = document.getElementById('viewsCounter');
 
-    // Set total duration for counting up (in milliseconds)
-    let totalDuration = 10000;
-
-    // Calculate step time for each counter
-    let subscribersDuration = Math.floor(totalDuration / subscribersTarget);
-    let likesDuration = Math.floor(totalDuration / likesTarget);
-    let videosDuration = Math.floor(totalDuration / videosTarget);
-
-    // Get elements to animate
-    let subscribersElement = document.getElementById('subscribers');
-    let likesElement = document.getElementById('likes');
-    let videosElement = document.getElementById('videos');
-
-    // Animate counting for each element
-    animateCount(subscribersElement, 0, subscribersTarget, subscribersDuration);
-    animateCount(likesElement, 0, likesTarget, likesDuration);
-    animateCount(videosElement, 0, videosTarget, videosDuration);
-});
+        animateCount(videosCounter, 1000, 10000); // 10 seconds animation for 1000 videos
+        animateCount(subscribersCounter, 50000, 10000); // 10 seconds animation for 50000 subscribers
+        animateCount(likesCounter, 100000, 10000); // 10 seconds animation for 100000 likes
+        animateCount(viewsCounter, 20000000, 10000); // 10 seconds animation for 20000000 views
+        // Add more counters as needed
     </script>
 </body>
 </html>
