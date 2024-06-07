@@ -7,76 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icon.png" type="image/png">
     <style>
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem;
-            font-family: 'Open Sans', sans-serif;
-            color: #ffffff;
-        }
-
-        .content img {
-            max-width: 300px;
-            margin-bottom: 1rem;
-            border-radius: 10px;
-        }
-
-        .content p {
-            max-width: 600px;
-            text-align: justify;
-            line-height: 1.6;
-        }
-
-        .data-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .data-item {
-            border: 2px solid #ffffff;
-            border-radius: 10px;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .data-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .data-item p {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Animation */
-        .counter {
-            color: #ffffff;
-            font-size: 1.5rem;
-            font-weight: bold;
-            animation: count-up 10s ease-in-out forwards;
-        }
-
-        @keyframes count-up {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .content p {
-                max-width: 100%;
-            }
-        }
+        /* Add your CSS styling here */
     </style>
 </head>
 <body>
@@ -90,60 +21,32 @@
         </ul>
     </nav>
     <div class="content">
-        <img src="Juff2.png" alt="JuffBass YouTube">
-        <p>
-            JuffBass's YouTube channel is dedicated to providing high-quality bass guitar tutorials, covers, and original compositions. With a focus on sharing his passion for music and helping others learn and improve their skills, JuffBass delivers engaging and informative content for bass enthusiasts of all levels.
-        </p>
-        <div class="data-container">
-            <div class="data-item">
-                <h3>Videos Uploaded</h3>
-                <p class="counter" id="videosCounter">0</p>
+        <div class="channel-info">
+            <img src="juff2.jpg" alt="JuffBass">
+            <p>
+                Insert your paragraph here...
+            </p>
+        </div>
+        <div class="youtube-stats">
+            <div class="tic-tac-toe">
+                <!-- Tic Tac Toe grid for YouTube stats -->
+                <div class="row">
+                    <div class="slot">0</div>
+                    <div class="slot">0</div>
+                    <div class="slot">0</div>
+                </div>
+                <div class="row">
+                    <div class="slot">0</div>
+                    <div class="slot">0</div>
+                    <div class="slot">0</div>
+                </div>
+                <div class="row">
+                    <div class="slot">0</div>
+                    <div class="slot">0</div>
+                    <div class="slot">0</div>
+                </div>
             </div>
-            <div class="data-item">
-                <h3>Subscribers</h3>
-                <p class="counter" id="subscribersCounter">0</p>
-            </div>
-            <div class="data-item">
-                <h3>Likes</h3>
-                <p class="counter" id="likesCounter">0</p>
-            </div>
-            <div class="data-item">
-                <h3>Views</h3>
-                <p class="counter" id="viewsCounter">0</p>
-            </div>
-            <!-- Add more data items as needed -->
         </div>
     </div>
-
-    <!-- JavaScript for counting up -->
-    <script>
-        // Function to animate counting up from 0 to a target number
-        function animateCount(element, target, duration) {
-            let start = 0;
-            const step = (timestamp) => {
-                if (!start) start = timestamp;
-                const progress = timestamp - start;
-                element.textContent = Math.floor((target / duration) * progress);
-                if (progress < duration) {
-                    window.requestAnimationFrame(step);
-                } else {
-                    element.textContent = target;
-                }
-            };
-            window.requestAnimationFrame(step);
-        }
-
-        // Call the function for each counter element
-        const videosCounter = document.getElementById('videosCounter');
-        const subscribersCounter = document.getElementById('subscribersCounter');
-        const likesCounter = document.getElementById('likesCounter');
-        const viewsCounter = document.getElementById('viewsCounter');
-
-        animateCount(videosCounter, 1000, 10000); // 10 seconds animation for 1000 videos
-        animateCount(subscribersCounter, 50000, 10000); // 10 seconds animation for 50000 subscribers
-        animateCount(likesCounter, 100000, 10000); // 10 seconds animation for 100000 likes
-        animateCount(viewsCounter, 20000000, 10000); // 10 seconds animation for 20000000 views
-        // Add more counters as needed
-    </script>
 </body>
 </html>
