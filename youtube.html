@@ -47,47 +47,46 @@
 
     <!-- JavaScript for Counter Effect -->
     <script>
-        // Function to animate counting from 0 to a target number
-        function animateCount(element, start, end, duration) {
-            let range = end - start;
-            let current = start;
-            let increment = end > start ? 1 : -1;
-            let stepTime = Math.abs(Math.floor(duration / range));
-            let timer = setInterval(function() {
-                current += increment;
-                element.textContent = current;
-                if (current === end) {
-                    clearInterval(timer);
-                }
-            }, stepTime);
+       // Function to animate counting from 0 to a target number with a specified duration
+function animateCount(element, start, end, duration) {
+    let range = end - start;
+    let current = start;
+    let increment = end > start ? 1 : -1;
+    let stepTime = Math.abs(Math.floor(duration / range));
+    let timer = setInterval(function() {
+        current += increment;
+        element.textContent = current;
+        if (current === end) {
+            clearInterval(timer);
         }
+    }, stepTime);
+}
 
-        // Trigger counter animation when the page is loaded
-        window.addEventListener('load', function() {
-            // Set target numbers
-            let subscribersTarget = 43000;
-            let likesTarget = 251000;
-            let videosTarget = 320;
+// Trigger counter animation when the page is loaded
+window.addEventListener('load', function() {
+    // Set target numbers
+    let subscribersTarget = 43000;
+    let likesTarget = 251000;
+    let videosTarget = 320;
 
-            // Find the maximum target value
-            let maxTarget = Math.max(subscribersTarget, likesTarget, videosTarget);
+    // Set total duration for counting up (in milliseconds)
+    let totalDuration = 10000;
 
-            // Calculate animation duration based on the maximum target value
-            let duration = 3000; // Default duration
-            if (maxTarget > 0) {
-                duration = Math.floor(3000 * maxTarget / 100000); // Adjusted duration based on the maximum target value
-            }
+    // Calculate step time for each counter
+    let subscribersDuration = Math.floor(totalDuration / subscribersTarget);
+    let likesDuration = Math.floor(totalDuration / likesTarget);
+    let videosDuration = Math.floor(totalDuration / videosTarget);
 
-            // Get elements to animate
-            let subscribersElement = document.getElementById('subscribers');
-            let likesElement = document.getElementById('likes');
-            let videosElement = document.getElementById('videos');
+    // Get elements to animate
+    let subscribersElement = document.getElementById('subscribers');
+    let likesElement = document.getElementById('likes');
+    let videosElement = document.getElementById('videos');
 
-            // Animate counting for each element with synchronized finish time
-            animateCount(subscribersElement, 0, subscribersTarget, duration);
-            animateCount(likesElement, 0, likesTarget, duration);
-            animateCount(videosElement, 0, videosTarget, duration);
-        });
+    // Animate counting for each element
+    animateCount(subscribersElement, 0, subscribersTarget, subscribersDuration);
+    animateCount(likesElement, 0, likesTarget, likesDuration);
+    animateCount(videosElement, 0, videosTarget, videosDuration);
+});
     </script>
 </body>
 </html>
