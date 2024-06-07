@@ -7,7 +7,70 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icon.png" type="image/png">
     <style>
-        /* Add your CSS styling here */
+    
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem;
+        }
+
+        .channel-info {
+            flex: 1;
+            max-width: 50%;
+            margin-right: 2rem;
+        }
+
+        .channel-info img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .channel-info p {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .youtube-stats {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .tic-tac-toe {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .slot {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            border: 2px solid #ffffff;
+            transition: background-color 0.3s ease;
+        }
+
+        .slot:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .channel-info, .youtube-stats {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -22,7 +85,7 @@
     </nav>
     <div class="content">
         <div class="channel-info">
-            <img src="juff2.jpg" alt="JuffBass">
+            <img src="Juff2.jpg" alt="JuffBass">
             <p>
                 Insert your paragraph here...
             </p>
@@ -48,5 +111,44 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Add your JavaScript code here
+        const slots = document.querySelectorAll('.slot');
+
+        // Function to animate counting up
+        function countUp(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 10);
+
+            const timer = setInterval(() => {
+                start += increment;
+                element.textContent = Math.round(start);
+
+                if (start >= target) {
+                    clearInterval(timer);
+                    element.textContent = target;
+                }
+            }, 10);
+        }
+
+        // Set targets and durations for each slot
+        const data = [
+            { target: 1234, duration: 1000 },
+            { target: 5678, duration: 1500 },
+            { target: 91011, duration: 2000 },
+            { target: 121314, duration: 2500 },
+            { target: 151617, duration: 3000 },
+            { target: 181920, duration: 3500 },
+            { target: 212223, duration: 4000 },
+            { target: 242526, duration: 4500 },
+            { target: 272829, duration: 5000 }
+        ];
+
+        // Animate each slot
+        slots.forEach((slot, index) => {
+            countUp(slot, data[index].target, data[index].duration);
+        });
+    </script>
 </body>
 </html>
