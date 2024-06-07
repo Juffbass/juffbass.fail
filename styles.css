@@ -7,7 +7,7 @@
 
 /* Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: #121212;
     color: #ffffff;
     overflow-y: auto; /* Enable vertical scrolling */
@@ -49,7 +49,7 @@ nav ul li a:hover {
 
 /* Home Page Background Image */
 .home-bg {
-    background: url('MY.png') no-repeat center center/cover;
+    background: url('main.png') no-repeat center center/cover;
     height: calc(100vh - 70px); /* Adjust based on navbar height */
     width: 100%;
     position: relative;
@@ -67,235 +67,64 @@ nav ul li a:hover {
     text-align: center;
     color: #ffffff;
     font-size: 1.5rem;
-    max-width: 90%;
-    margin: 0 auto;
 }
 
-#countdown {
+.countdown-box h2 {
+    font-family: 'Lora', serif;
+    margin-bottom: 10px;
+}
+
+.countdown {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-#countdown span {
-    font-weight: bold;
+.countdown div {
+    margin: 0 10px;
 }
 
-/* Content Styling */
-.content {
-    padding: 2rem;
+/* Media Queries */
+@media (max-width: 768px) {
+    .countdown-box {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .countdown {
+        flex-direction: column;
+    }
+
+    .countdown div {
+        margin: 5px 0;
+    }
 }
 
-/* Albums Styling */
-.albums {
+/* Additional Styling for restrictionzone.html */
+.restriction-zone {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.album {
-    text-align: center;
-    cursor: pointer;
-}
-
-.album img {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.album img:hover {
-    transform: scale(1.1);
-}
-
-/* Popup Styling */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.hidden {
-    display: none;
-}
-
-.popup-content {
-    background: #222;
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 600px;
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-#popup-album-cover {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-
-.popup-info {
-    max-height: 300px;
-    overflow-y: auto;
-    width: 100%;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #121212;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #444444;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555555;
-}
-
-/* Custom Scrollbar Visibility */
-body:hover ::-webkit-scrollbar {
-    display: block;
-}
-
-.popup-info::-webkit-scrollbar {
-    width: 8px;
-}
-
-.popup-info::-webkit-scrollbar-track {
-    background: #121212;
-}
-
-.popup-info::-webkit-scrollbar-thumb {
-    background: #444444;
-    border-radius: 4px;
-}
-
-.popup-info::-webkit-scrollbar-thumb:hover {
-    background: #555555;
-}
-
-/* Restriction Zone Styling */
-.restriction-container {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     text-align: center;
 }
 
-.restriction-container p {
+.restriction-zone p {
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
-.restriction-container button {
+.restriction-zone a {
+    display: inline-block;
     padding: 10px 20px;
-    font-size: 1rem;
-    color: black;
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.restriction-container button:hover {
-    background-color: #444;
-    color: white;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 1rem;
-    }
-
-    .home-bg {
-        height: calc(100vh - 60px); /* Adjust based on navbar height */
-    }
-
-    .countdown-box {
-        padding: 15px;
-        font-size: 1.2rem;
-        max-width: 100%;
-    }
-
-    #countdown {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .album img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .popup-content {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul {
-        padding: 0;
-    }
-
-    nav ul li {
-        margin-bottom: 0.5rem;
-    }
-
-    .countdown-box {
-        padding: 10px;
-        font-size: 1rem;
-        max-width: 100%;
-    }
-
-    .album img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .popup-content {
-        padding: 0.5rem;
-    }
+.restriction-zone a:hover {
+    background-color: #b3b3b3;
 }
