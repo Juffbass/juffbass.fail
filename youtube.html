@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuffBass - YouTube</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <img src="juffbass.png" alt="Logo" class="logo">
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="autobio.html">About</a></li>
+            <li><a href="music.html">Originals</a></li>
+            <li><a href="youtube.html">YouTube</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <img src="juff2.jpg" alt="JuffBass" class="content-image">
+        <p>
+            Welcome to JuffBass's official YouTube channel! Here you'll find a collection of bass covers, original compositions, tutorials, and much more. Join our growing community of bass enthusiasts and stay updated with the latest content and live interactions.
+        </p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subscribers</th>
+                        <th>Likes</th>
+                        <th>Videos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="subscribers">0</td>
+                        <td id="likes">0</td>
+                        <td id="videos">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- JavaScript for Counter Effect -->
+    <script>
+        // Function to animate counting from 0 to a target number
+        function animateCount(element, start, end, duration) {
+            let range = end - start;
+            let current = start;
+            let increment = end > start ? 1 : -1;
+            let stepTime = Math.abs(Math.floor(duration / range));
+            let timer = setInterval(function() {
+                current += increment;
+                element.textContent = current;
+                if (current === end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        // Trigger counter animation when the page is loaded
+        window.addEventListener('load', function() {
+            // Set target numbers
+            let subscribersTarget = 43000;
+            let likesTarget = 251000;
+            let videosTarget = 300;
+
+            // Get elements to animate
+            let subscribersElement = document.getElementById('subscribers');
+            let likesElement = document.getElementById('likes');
+            let videosElement = document.getElementById('videos');
+
+            // Animate counting for each element
+            animateCount(subscribersElement, 0, subscribersTarget, 1500);
+            animateCount(likesElement, 0, likesTarget, 1500);
+            animateCount(videosElement, 0, videosTarget, 1500);
+        });
+    </script>
+</body>
+</html>
