@@ -65,17 +65,22 @@
             // Set target numbers
             let subscribersTarget = 43000;
             let likesTarget = 251000;
-            let videosTarget = 300;
+            let videosTarget = 320;
 
             // Get elements to animate
             let subscribersElement = document.getElementById('subscribers');
             let likesElement = document.getElementById('likes');
             let videosElement = document.getElementById('videos');
 
-            // Animate counting for each element
-            animateCount(subscribersElement, 0, subscribersTarget, 1500);
-            animateCount(likesElement, 0, likesTarget, 1500);
-            animateCount(videosElement, 0, videosTarget, 1500);
+            // Calculate average time for all counters to finish
+            let totalTargets = subscribersTarget + likesTarget + videosTarget;
+            let averageTime = 1500 * 3; // Default duration for each counter
+            let duration = Math.floor(averageTime / totalTargets);
+
+            // Animate counting for each element with synchronized finish time
+            animateCount(subscribersElement, 0, subscribersTarget, duration);
+            animateCount(likesElement, 0, likesTarget, duration);
+            animateCount(videosElement, 0, videosTarget, duration);
         });
     </script>
 </body>
