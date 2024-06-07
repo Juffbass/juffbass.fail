@@ -47,6 +47,36 @@ nav ul li a:hover {
     color: #b3b3b3;
 }
 
+/* Additional Styling for the Tic-Tac-Toe Table */
+.tic-tac-toe-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tic-tac-toe-table th, .tic-tac-toe-table td {
+    border: 2px solid #ffffff;
+    width: 25%; /* Divide table into 4 equal parts */
+    height: 120px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.tic-tac-toe-table th {
+    background-color: #1e1e1e;
+}
+
+.tic-tac-toe-table td {
+    background-color: #2b2b2b;
+}
+
+/* Adjustments for Responsive Design */
+@media (max-width: 768px) {
+    .tic-tac-toe-table th, .tic-tac-toe-table td {
+        height: 80px;
+    }
+}
+
 /* Content Styling */
 .content {
     padding: 2rem;
@@ -55,4 +85,7 @@ nav ul li a:hover {
 
 .content-image {
     float: left;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
+    width: 200px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+}
