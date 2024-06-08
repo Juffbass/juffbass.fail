@@ -47,16 +47,84 @@ nav ul li a:hover {
     color: #b3b3b3;
 }
 
-
-/* Content Styling */
-.content {
-    padding: 2rem;
-    font-family: 'Open Sans', sans-serif;
+/* Home Page Background Image */
+.home-bg {
+    background: url('main.png') no-repeat center center/cover;
+    height: calc(100vh - 70px); /* Adjust based on navbar height */
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 50px;
 }
 
-.content-image {
-    float: left;
-    margin-right: 1rem;
-    width: 200px; /* Adjust image width */
-    height: auto; /* Maintain aspect ratio */
+/* Countdown Box Styling */
+.countdown-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.countdown-box h2 {
+    font-family: 'Lora', serif;
+    margin-bottom: 10px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+}
+
+.countdown div {
+    margin: 0 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .countdown-box {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .countdown {
+        flex-direction: column;
+    }
+
+    .countdown div {
+        margin: 5px 0;
+    }
+}
+
+/* Additional Styling for restrictionzone.html */
+.restriction-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+.restriction-zone p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.restriction-zone a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.restriction-zone a:hover {
+    background-color: #b3b3b3;
 }
