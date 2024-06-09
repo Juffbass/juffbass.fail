@@ -76,15 +76,17 @@ nav ul li a:hover {
 .listen-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #444;
+    background-color: #666;
     color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .listen-btn:hover {
-    background-color: #666;
+    background-color: #888;
+    border-color: #888;
 }
 
 /* Footer Styling */
@@ -100,11 +102,12 @@ footer {
 .footer-icons {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
 .footer-icons img {
-    height: 30px;
+    height: 40px;
     transition: transform 0.3s ease;
 }
 
@@ -124,7 +127,7 @@ footer {
     }
 
     .footer-icons img {
-        height: 25px;
+        height: 35px;
     }
 }
 
