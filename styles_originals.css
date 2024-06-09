@@ -1,9 +1,5 @@
-/* Update the logo width */
-nav .logo {
-    width: auto;
-}
-
-/* Adjust album layout */
+/* Move styles to external CSS file */
+/* Styles for original music page */
 .album-section {
     display: flex;
     justify-content: space-between;
@@ -12,25 +8,46 @@ nav .logo {
 }
 
 .album-info {
-    flex-basis: 48%; /* Adjust to fit two albums in a row with spacing */
+    flex-basis: calc(50% - 10px); /* Adjust to fit two albums in a row with spacing */
     text-align: center;
 }
 
+.album-info img {
+    max-width: 100%; /* Make album images responsive */
+    height: auto;
+}
+
 .album-description {
-    margin-left: 20px;
+    margin-top: 10px; /* Adjust spacing */
 }
 
 .album-description h2 {
-    font-size: 20px;
+    font-size: 24px; /* Increase font size for album titles */
     margin-bottom: 10px;
 }
 
 .album-description p {
     margin: 5px 0;
+    font-size: 14px; /* Decrease font size for album descriptions */
 }
 
-.spotify-embed {
-    display: none;
+.button-spotify {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px; /* Adjust spacing */
+    cursor: pointer;
+    border-radius: 8px; /* Add border radius */
+    transition: background-color 0.3s; /* Add transition effect */
+}
+
+.button-spotify:hover {
+    background-color: #45a049; /* Darker green on hover */
 }
 
 .spotify-popup {
@@ -39,14 +56,75 @@ nav .logo {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #111; /* Update the background color */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
+    padding: 40px; /* Increase padding */
+    border-radius: 20px; /* Increase border radius */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3
 
 .spotify-popup iframe {
     width: 100%;
-    height: 352px;
+    height: 100%; /* Make iframe height 100% */
     border: none;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+
+/* Tablet devices (landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .album-info {
+        flex-basis: calc(50% - 20px); /* Adjust to fit two albums in a row with spacing */
+    }
+
+    .album-description {
+        margin-top: 20px; /* Adjust spacing */
+    }
+
+    .album-description h2 {
+        font-size: 22px; /* Decrease font size for album titles */
+    }
+
+    .album-description p {
+        font-size: 12px; /* Decrease font size for album descriptions */
+    }
+
+    .button-spotify {
+        padding: 12px 28px; /* Adjust padding */
+        font-size: 14px; /* Decrease font size */
+        margin-top: 15px; /* Adjust spacing */
+    }
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 767px) {
+    .album-section {
+        flex-direction: column; /* Stack albums vertically */
+    }
+
+    .album-info {
+        flex-basis: 100%; /* Take full width */
+        margin-bottom: 20px; /* Adjust spacing */
+    }
+
+    .button-spotify {
+        padding: 10px 24px; /* Adjust padding */
+        font-size: 12px; /* Decrease font size */
+        margin-top: 10px; /* Adjust spacing */
+    }
+
+    .spotify-popup {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .close-button {
+        font-size: 20px; /* Decrease font size */
+        top: 5px; /* Adjust position */
+        right: 5px; /* Adjust position */
+    }
 }
