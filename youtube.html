@@ -64,7 +64,7 @@
             function shuffleVideos(carouselSelector) {
                 var carousel = $(carouselSelector);
                 var children = carousel.children();
-                for (var i = children.length; i >= 0; i--) {
+                for (var i = children.length; i > 0; i--) {
                     carousel.append(children.eq(Math.floor(Math.random() * i)));
                 }
             }
