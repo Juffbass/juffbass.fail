@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JuffBass - Youtube</title>
+    <title>YouTube - Artist Website</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles_yt.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
@@ -22,21 +22,23 @@
     </nav>
     <div class="content">
         <section class="intro-section">
-            <img src="Juff2.jpg" alt="Juff" class="intro-image">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
+            <div class="intro-content">
+                <img src="Juff2.jpg" alt="Juff" class="intro-image">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
+            </div>
         </section>
         <div class="tilted-lines"></div>
         <section class="section-color2">
             <h2>Popular Videos</h2>
             <div class="video-carousel">
-                <div><iframe src="https://www.youtube.com/embed/iZ5bZotdYrA" frameborder="0" allowfullscreen></iframe></div>
-                <div><iframe src="https://www.youtube.com/embed/J8IHwKMTCAM" frameborder="0" allowfullscreen></iframe></div>
-                <div><iframe src="https://www.youtube.com/embed/nLQbrMhVYgY" frameborder="0" allowfullscreen></iframe></div>
-                <div><iframe src="https://www.youtube.com/embed/IJKxFRmTy0s" frameborder="0" allowfullscreen></iframe></div>
-                <div><iframe src="https://www.youtube.com/embed/paQr34qrZMA" frameborder="0" allowfullscreen></iframe></div>
-                <div><iframe src="https://www.youtube.com/embed/ZLY14CZiCS8" frameborder="0" allowfullscreen></iframe></div>
-                <div><iframe src="https://www.youtube.com/embed/2x981Kc6ZyM" frameborder="0" allowfullscreen></iframe></div>
-                <div><iframe src="https://www.youtube.com/embed/tn_PasV5tOk" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/iZ5bZotdYrA?hd=1" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/J8IHwKMTCAM?hd=1" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/nLQbrMhVYgY?hd=1" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/IJKxFRmTy0s?hd=1" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/paQr34qrZMA?hd=1" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/ZLY14CZiCS8?hd=1" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/2x981Kc6ZyM?hd=1" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/tn_PasV5tOk?hd=1" frameborder="0" allowfullscreen></iframe></div>
             </div>
         </section>
         <div class="tilted-lines"></div>
@@ -60,7 +62,18 @@
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 2000,
-                arrows: true
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true
+                        }
+                    }
+                ]
             });
         });
     </script>
