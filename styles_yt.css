@@ -1,90 +1,35 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-header {
-    background: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
+section {
+    padding: 40px 20px;
     text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.intro-section {
+    background-color: #111; /* color 1 */
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.section-color1 {
+    background-color: #111; /* color 1 */
+    transform: skewY(-5deg);
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.section-color2 {
+    background-color: #333; /* color 2 */
+    transform: skewY(-5deg);
 }
 
-main {
-    text-align: center;
-    padding: 20px;
+.section-color1 h2, .section-color2 h2 {
+    transform: skewY(5deg);
 }
 
-.channel-intro {
-    margin-bottom: 20px;
+.section-color1 p, .section-color2 p {
+    transform: skewY(5deg);
 }
 
-.video-section {
-    margin: 20px 0;
+.tilted-lines {
+    height: 10px;
+    background: linear-gradient(to right, #333 25%, transparent 25%, transparent 75%, #333 75%);
+    background-size: 40px 10px;
+    transform: skewY(-5deg);
 }
 
-.video-container {
-    margin: 0 auto;
-    max-width: 560px;
-}
 
-.video-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.video-item {
-    margin: 10px;
-}
-
-.carousel-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-}
-
-.carousel-item {
-    flex: 0 0 auto;
-    margin: 10px;
-}
-
-.channel-link {
-    margin: 30px 0;
-}
-
-.channel-link a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    background-color: #ddd;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.channel-link a:hover {
-    background-color: #ccc;
-}
