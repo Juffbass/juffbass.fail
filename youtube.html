@@ -29,30 +29,14 @@
         <section class="section-color2">
             <h2>Popular Videos</h2>
             <div class="video-carousel">
-                <div class="video-item" data-video-id="iZ5bZotdYrA">
-                    <img src="https://img.youtube.com/vi/iZ5bZotdYrA/0.jpg" alt="Thumbnail">
-                </div>
-                <div class="video-item" data-video-id="J8IHwKMTCAM">
-                    <img src="https://img.youtube.com/vi/J8IHwKMTCAM/0.jpg" alt="Thumbnail">
-                </div>
-                <div class="video-item" data-video-id="nLQbrMhVYgY">
-                    <img src="https://img.youtube.com/vi/nLQbrMhVYgY/0.jpg" alt="Thumbnail">
-                </div>
-                <div class="video-item" data-video-id="IJKxFRmTy0s">
-                    <img src="https://img.youtube.com/vi/IJKxFRmTy0s/0.jpg" alt="Thumbnail">
-                </div>
-                <div class="video-item" data-video-id="paQr34qrZMA">
-                    <img src="https://img.youtube.com/vi/paQr34qrZMA/0.jpg" alt="Thumbnail">
-                </div>
-                <div class="video-item" data-video-id="ZLY14CZiCS8">
-                    <img src="https://img.youtube.com/vi/ZLY14CZiCS8/0.jpg" alt="Thumbnail">
-                </div>
-                <div class="video-item" data-video-id="2x981Kc6ZyM">
-                    <img src="https://img.youtube.com/vi/2x981Kc6ZyM/0.jpg" alt="Thumbnail">
-                </div>
-                <div class="video-item" data-video-id="tn_PasV5tOk">
-                    <img src="https://img.youtube.com/vi/tn_PasV5tOk/0.jpg" alt="Thumbnail">
-                </div>
+                <div><iframe src="https://www.youtube.com/embed/iZ5bZotdYrA" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/J8IHwKMTCAM" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/nLQbrMhVYgY" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/IJKxFRmTy0s" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/paQr34qrZMA" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/ZLY14CZiCS8" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/2x981Kc6ZyM" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/tn_PasV5tOk" frameborder="0" allowfullscreen></iframe></div>
             </div>
         </section>
         <div class="tilted-lines"></div>
@@ -77,12 +61,6 @@
                 autoplay: true,
                 autoplaySpeed: 2000,
                 arrows: true
-            });
-
-            $('.video-item').click(function() {
-                const videoId = $(this).data('video-id');
-                const iframe = `<iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>`;
-                $(this).html(iframe);
             });
         });
     </script>
