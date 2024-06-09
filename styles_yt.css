@@ -2,13 +2,13 @@ section {
     padding: 40px 20px;
     text-align: center;
 }
+
 .intro-section {
     background-color: #111; /* color 1 */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    font-family: 'Roboto', sans-serif; /* Use Roboto font */
 }
 
 .intro-image {
@@ -20,18 +20,16 @@ section {
 .intro-section p {
     max-width: 60%;
     text-align: left;
-    font-size: 30px; /* Increase text size */
-    line-height: 1.5; /* Adjust line height for better readability */
-
+}
 
 .section-color1 {
-    background-color: #333; /* color 1 */
+    background-color: #111; /* color 1 */
     transform: skewY(-5deg);
     padding: 60px 20px;
 }
 
 .section-color2 {
-    background-color: #111; /* color 2 */
+    background-color: #333; /* color 2 */
     transform: skewY(-5deg);
     padding: 60px 20px;
 }
@@ -65,25 +63,6 @@ section {
     width: 100%;
     height: auto; /* Let the height adjust according to the original aspect ratio */
     border: none;
-}
-
-.playlist-links {
-    list-style-type: none;
-    padding: 0;
-}
-
-.playlist-links li {
-    margin: 10px 0;
-}
-
-.playlist-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.playlist-links a:hover {
-    text-decoration: underline;
 }
 
 .slick-prev, .slick-next {
