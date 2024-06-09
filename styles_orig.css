@@ -64,15 +64,15 @@ nav ul li a {
 
 .album-title {
     font-size: 2rem;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Kanit', sans-serif;
 }
 
 .listen-now {
-    background-color: #1DB954;
+    background-color: #474545;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    cursor: pointer;
+    cursor: default;
     margin-top: 1rem;
     font-size: 1rem;
 }
@@ -98,17 +98,17 @@ nav ul li a {
 
 .popup-content {
     background-color: #111;
-    margin: 15% auto;
+    margin: 5% auto;
     padding: 1rem;
     border: 1px solid #888;
     width: 80%;
-    max-width: 600px;
+    max-width: 800px;
     position: relative;
 }
 
 .popup-content iframe {
     width: 100%;
-    height: 352px;
+    height: 400px;
 }
 
 .close {
