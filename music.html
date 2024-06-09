@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles_originals.css">
     <link rel="icon" href="icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Your CSS styles for originals.html */
+        body {
+            font-family: 'Lora', serif;
+        }
+
+        .album-section {
             display: flex;
             align-items: center;
             margin-bottom: 50px;
@@ -22,7 +28,6 @@
 
         .album-description {
             margin-left: 20px;
-            font-family: 'Roboto', sans-serif;
             font-size: 16px;
             line-height: 1.5;
         }
@@ -45,16 +50,17 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #111;
+            color: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
             z-index: 1000;
         }
 
         .spotify-popup iframe {
             width: 100%;
-            height: 352px;
+            height: 500px;
             border: none;
         }
 
@@ -70,7 +76,7 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 8px;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Lora', serif;
             transition: background-color 0.3s;
         }
 
@@ -80,16 +86,21 @@
 
         .close-button {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 24px;
+            top: 20px;
+            right: 20px;
+            font-size: 32px;
             cursor: pointer;
-            color: #888;
+            color: #fff;
             transition: color 0.3s;
         }
 
         .close-button:hover {
-            color: #555;
+            color: #ccc;
+        }
+
+        img {
+            max-width: 100px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -195,5 +206,7 @@
             }
         }
     </script>
+</body>
+</html>
 </body>
 </html>
