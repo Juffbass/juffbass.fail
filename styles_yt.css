@@ -2,13 +2,13 @@ section {
     padding: 40px 20px;
     text-align: center;
 }
-
 .intro-section {
     background-color: #111; /* color 1 */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
 }
 
 .intro-image {
@@ -20,6 +20,7 @@ section {
 .intro-section p {
     max-width: 60%;
     text-align: left;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
 }
 
 .section-color1 {
