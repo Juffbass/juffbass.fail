@@ -55,14 +55,15 @@ section {
     padding: 20px 0; /* Add padding between videos */
 }
 
-.video-carousel div {
+.video-wrapper {
     padding: 0 10px; /* Space between videos */
-    outline: none; /* Prevents blue border on click */
 }
 
-.video-carousel iframe {
+.video-wrapper iframe {
     width: 100%;
-    height: 200px; /* Smaller height to remove black borders */
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    border: none;
 }
 
 .slick-prev, .slick-next {
@@ -89,9 +90,7 @@ section {
     color: #fff;
 }
 
-
-/* scrollbar code for dummy me to find */
-
+/* scrollbox code for dummy me to find*/
 .content {
     padding: 80px 20px;
     min-height: 100vh;
