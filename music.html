@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JuffBass - Originals</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="styles_originals.css">
+    <link rel="icon" href="icon.png">
+
 </head>
 <body>
     <nav>
@@ -18,46 +20,78 @@
         </ul>
     </nav>
     <div class="content">
-        <h1>JuffBass Originals</h1>
-        <div class="albums">
-            <div class="album" data-album="album1">
+        <section class="album-section">
+            <div class="album-info">
                 <img src="album1.jpg" alt="Album 1">
-                <p>Emptiness Reigns</p>
+                <div class="album-description">
+                    <h2>Emptiness Reigns</h2>
+                    <p>Released: 2023</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
+                    <button onclick="embedSpotify('4cdUqNAisfdznZOvnKgCJS')">Listen on Spotify</button>
+                </div>
             </div>
-            <div class="album" data-album="album2">
+            <div id="spotifyEmbed1" class="spotify-embed"></div>
+        </section>
+        <section class="album-section">
+            <div class="album-info">
                 <img src="album2.jpg" alt="Album 2">
-                <p>Monolith</p>
+                <div class="album-description">
+                    <h2>Monolith</h2>
+                    <p>Released: 2022</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
+                    <button onclick="embedSpotify('6u1V7sTuURWuFtNPdx2ycO')">Listen on Spotify</button>
+                </div>
             </div>
-            <div class="album" data-album="album3">
+            <div id="spotifyEmbed2" class="spotify-embed"></div>
+        </section>
+        <section class="album-section">
+            <div class="album-info">
                 <img src="album3.jpg" alt="Album 3">
-                <p>Farewell Flight</p>
+                <div class="album-description">
+                    <h2>Farewell Flight</h2>
+                    <p>Released: 2021</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
+                    <button onclick="embedSpotify('1I5oMbeicLStSY48ffbjHg')">Listen on Spotify</button>
+                </div>
             </div>
-            <div class="album" data-album="album4">
+            <div id="spotifyEmbed3" class="spotify-embed"></div>
+        </section>
+        <section class="album-section">
+            <div class="album-info">
                 <img src="album4.jpg" alt="Album 4">
-                <p>Hiraeth</p>
+                <div class="album-description">
+                    <h2>Hiraeth</h2>
+                    <p>Released: 2020</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
+                    <button onclick="embedSpotify('6MLVmsdYxle0L9A8OIBbRJ')">Listen on Spotify</button>
+                </div>
             </div>
-            <div class="album" data-album="album5">
+            <div id="spotifyEmbed4" class="spotify-embed"></div>
+        </section>
+        <section class="album-section">
+            <div class="album-info">
                 <img src="album5.jpg" alt="Album 5">
-                <p>Evenings On a Balcony</p>
+                <div class="album-description">
+                    <h2>Evenings On a Balcony</h2>
+                    <p>Released: 2018</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
+                    <button onclick="embedSpotify('2tLEH3AOutd3rVq8PwgI76')">Listen on Spotify</button>
+                </div>
             </div>
-            <div class="album" data-album="album6">
+            <div id="spotifyEmbed5" class="spotify-embed"></div>
+        </section>
+        <section class="album-section">
+            <div class="album-info">
                 <img src="album6.jpg" alt="Album 6">
-                <p>Moments With Birds</p>
+                <div class="album-description">
+                    <h2>Moments With Birds</h2>
+                    <p>Released: 2017</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
+                    <button onclick="embedSpotify('69AR61r9dyYsTsR7Yv6aNH')">Listen on Spotify</button>
+                </div>
             </div>
-        </div>
+            <div id="spotifyEmbed6" class="spotify-embed"></div>
+        </section>
     </div>
-
-    <!-- Album Pop-up Template -->
-    <div id="album-popup" class="popup hidden">
-        <div class="popup-content">
-            <button class="close-btn">&times;</button>
-            <img id="popup-album-cover" src="" alt="Album Cover">
-            <div id="popup-album-info" class="popup-info">
-                <!-- Album information goes here -->
-            </div>
-        </div>
-    </div>
-
-    <script src="scripts.js"></script>
-</body>
-</html>
+    <script>
+       
