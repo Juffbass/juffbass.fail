@@ -128,3 +128,32 @@ nav ul li a:hover {
 .restriction-zone a:hover {
     background-color: #b3b3b3;
 }
+.content {
+    padding: 80px 20px;
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.content:hover::-webkit-scrollbar {
+    display: block;
+}
