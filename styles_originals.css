@@ -1,0 +1,33 @@
+.album-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.album-info {
+    flex: 1;
+    text-align: center;
+}
+
+.album-description {
+    margin-top: 20px;
+}
+
+.album-description h2 {
+    font-size: 24px;
+}
+
+.album-description p {
+    margin: 5px 0;
+}
+
+.spotify-embed {
+    flex: 1;
+    text-align: center;
+}
+
+.spotify-embed iframe {
+    max-width: 100%;
+}
+
