@@ -1,27 +1,27 @@
-body {
-    font-family: 'Lora', serif;
+/* Update the logo width */
+nav .logo {
+    width: auto;
 }
 
+/* Adjust album layout */
 .album-section {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
 }
 
 .album-info {
-    display: flex;
-    align-items: center;
-    flex: 1;
+    flex-basis: 48%; /* Adjust to fit two albums in a row with spacing */
+    text-align: center;
 }
 
 .album-description {
     margin-left: 20px;
-    font-size: 16px;
-    line-height: 1.5;
 }
 
 .album-description h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
@@ -38,55 +38,15 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #111;
-    color: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-color: #111; /* Update the background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
 .spotify-popup iframe {
     width: 100%;
-    height: 500px;
+    height: 352px;
     border: none;
-}
-
-button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-    font-family: 'Lora', serif;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-.close-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 32px;
-    cursor: pointer;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-.close-button:hover {
-    color: #ccc;
-}
-
-img {
-    max-width: 100px;
-    border-radius: 10px;
 }
