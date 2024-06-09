@@ -5,92 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JuffBass - Originals</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles_originals.css">
+    <link rel="stylesheet" href="styles_orig.css">
     <link rel="icon" href="icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Inline styles from original CSS file */
-        nav .logo {
-            width: auto;
-        }
-
-        .album-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 50px;
-        }
-
-        .album-info {
-            flex-basis: calc(50% - 10px); /* Adjust to fit two albums in a row with spacing */
-            text-align: center;
-        }
-
-        .album-info img {
-            max-width: 100%; /* Make album images responsive */
-            height: auto;
-        }
-
-        .album-description {
-            margin-top: 10px; /* Adjust spacing */
-        }
-
-        .album-description h2 {
-            font-size: 24px; /* Increase font size for album titles */
-            margin-bottom: 10px;
-        }
-
-        .album-description p {
-            margin: 5px 0;
-            font-size: 14px; /* Decrease font size for album descriptions */
-        }
-
-        .button-spotify {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin-top: 10px; /* Adjust spacing */
-            cursor: pointer;
-            border-radius: 8px; /* Add border radius */
-            transition: background-color 0.3s; /* Add transition effect */
-        }
-
-        .button-spotify:hover {
-            background-color: #45a049; /* Darker green on hover */
-        }
-
-        .spotify-popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #111; /* Update the background color */
-            padding: 40px; /* Increase padding */
-            border-radius: 20px; /* Increase border radius */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Update box shadow */
-            z-index: 1000;
-        }
-
-        .spotify-popup iframe {
-            width: 100%;
-            height: 100%; /* Make iframe height 100% */
-            border: none;
-        }
-
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 24px;
-            color: #FFF;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <nav>
@@ -103,95 +19,116 @@
         </ul>
     </nav>
     <div class="content">
-        <section class="album-section">
+        <!-- Album 1 -->
+        <section class="album-section section-color1">
+            <img src="album1.jpg" alt="Emptiness Reigns" class="album-cover">
             <div class="album-info">
-                <img src="album1.jpg" alt="Album 1">
-                <div class="album-description">
-                    <h2>Emptiness Reigns</h2>
-                    <p>Released: 2023</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
-                    <button class="button-spotify" onclick="embedSpotify('4cdUqNAisfdznZOvnKgCJS')">Listen on Spotify</button>
-                </div>
+                <h2 class="album-title">Emptiness Reigns - 2023</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor. Duis vulputate, felis sit amet venenatis dictum, purus lectus laoreet enim, a egestas magna elit et justo.</p>
+                <button class="listen-now" onclick="showPopup('popup1')">Listen Now</button>
+                <img src="spotify.png" alt="Spotify" class="spotify-icon" onclick="showPopup('popup1')">
             </div>
-            <div id="spotifyEmbed1" class="spotify-embed"></div>
         </section>
-        <section class="album-section">
+        <!-- Popup for Album 1 -->
+        <div id="popup1" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="hidePopup('popup1')">&times;</span>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4cdUqNAisfdznZOvnKgCJS?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Album 2 -->
+        <section class="album-section section-color2">
+            <img src="album2.jpg" alt="Monolith" class="album-cover">
             <div class="album-info">
-                <img src="album2.jpg" alt="Album 2">
-                <div class="album-description">
-                    <h2>Monolith</h2>
-                    <p>Released: 2022</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
-                    <button onclick="embedSpotify('6u1V7sTuURWuFtNPdx2ycO')">Listen on Spotify</button>
-                </div>
+                <h2 class="album-title">Monolith - 2022</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor. Duis vulputate, felis sit amet venenatis dictum, purus lectus laoreet enim, a egestas magna elit et justo.</p>
+                <button class="listen-now" onclick="showPopup('popup2')">Listen Now</button>
+                <img src="spotify.png" alt="Spotify" class="spotify-icon" onclick="showPopup('popup2')">
             </div>
-            <div id="spotifyEmbed2" class="spotify-embed"></div>
         </section>
-        <section class="album-section">
+        <!-- Popup for Album 2 -->
+        <div id="popup2" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="hidePopup('popup2')">&times;</span>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6u1V7sTuURWuFtNPdx2ycO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Album 3 -->
+        <section class="album-section section-color1">
+            <img src="album3.jpg" alt="Farewell Flight" class="album-cover">
             <div class="album-info">
-                <img src="album3.jpg" alt="Album 3">
-                <div class="album-description">
-                    <h2>Farewell Flight</h2>
-                    <p>Released: 2021</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
-                    <button onclick="embedSpotify('1I5oMbeicLStSY48ffbjHg')">Listen on Spotify</button>
-                </div>
+                <h2 class="album-title">Farewell Flight - 2021</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor. Duis vulputate, felis sit amet venenatis dictum, purus lectus laoreet enim, a egestas magna elit et justo.</p>
+                <button class="listen-now" onclick="showPopup('popup3')">Listen Now</button>
+                <img src="spotify.png" alt="Spotify" class="spotify-icon" onclick="showPopup('popup3')">
             </div>
-            <div id="spotifyEmbed3" class="spotify-embed"></div>
         </section>
-        <section class="album-section">
+        <!-- Popup for Album 3 -->
+        <div id="popup3" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="hidePopup('popup3')">&times;</span>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1I5oMbeicLStSY48ffbjHg?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Album 4 -->
+        <section class="album-section section-color2">
+            <img src="album4.jpg" alt="Hiraeth" class="album-cover">
             <div class="album-info">
-                <img src="album4.jpg" alt="Album 4">
-                <div class="album-description">
-                    <h2>Hiraeth</h2>
-                    <p>Released: 2020</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
-                    <button onclick="embedSpotify('6MLVmsdYxle0L9A8OIBbRJ')">Listen on Spotify</button>
-                </div>
+                <h2 class="album-title">Hiraeth - 2020</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor. Duis vulputate, felis sit amet venenatis dictum, purus lectus laoreet enim, a egestas magna elit et justo.</p>
+                <button class="listen-now" onclick="showPopup('popup4')">Listen Now</button>
+                <img src="spotify.png" alt="Spotify" class="spotify-icon" onclick="showPopup('popup4')">
             </div>
-            <div id="spotifyEmbed4" class="spotify-embed"></div>
         </section>
-        <section class="album-section">
+        <!-- Popup for Album 4 -->
+        <div id="popup4" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="hidePopup('popup4')">&times;</span>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6MLVmsdYxle0L9A8OIBbRJ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Album 5 -->
+        <section class="album-section section-color1">
+            <img src="album5.jpg" alt="Evenings On a Balcony" class="album-cover">
             <div class="album-info">
-                <img src="album5.jpg" alt="Album 5">
-                <div class="album-description">
-                    <h2>Evenings On a Balcony</h2>
-                    <p>Released: 2018</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
-                    <button onclick="embedSpotify('2tLEH3AOutd3rVq8PwgI76')">Listen on Spotify</button>
-                </div>
+                <h2 class="album-title">Evenings On a Balcony - 2018</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor. Duis vulputate, felis sit amet venenatis dictum, purus lectus laoreet enim, a egestas magna elit et justo.</p>
+                <button class="listen-now" onclick="showPopup('popup5')">Listen Now</button>
+                <img src="spotify.png" alt="Spotify" class="spotify-icon" onclick="showPopup('popup5')">
             </div>
-            <div id="spotifyEmbed5" class="spotify-embed"></div>
         </section>
-        <section class="album-section">
+        <!-- Popup for Album 5 -->
+        <div id="popup5" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="hidePopup('popup5')">&times;</span>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2tLEH3AOutd3rVq8PwgI76?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Album 6 -->
+        <section class="album-section section-color2">
+            <img src="album6.jpg" alt="Moments With Birds" class="album-cover">
             <div class="album-info">
-                <img src="album6.jpg" alt="Album 6">
-                <div class="album-description">
-                    <h2>Moments With Birds</h2>
-                    <p>Released: 2017</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
-                    <button onclick="embedSpotify('69AR61r9dyYsTsR7Yv6aNH')">Listen on Spotify</button>
-                </div>
+                <h2 class="album-title">Moments With Birds - 2017</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor. Duis vulputate, felis sit amet venenatis dictum, purus lectus laoreet enim, a egestas magna elit et justo.</p>
+                <button class="listen-now" onclick="showPopup('popup6')">Listen Now</button>
+                <img src="spotify.png" alt="Spotify" class="spotify-icon" onclick="showPopup('popup6')">
             </div>
-            <div id="spotifyEmbed6" class="spotify-embed"></div>
         </section>
+        <!-- Popup for Album 6 -->
+        <div id="popup6" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="hidePopup('popup6')">&times;</span>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/69AR61r9dyYsTsR7Yv6aNH?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
     </div>
-   <script>
-        function embedSpotify(albumId) {
-            const popup = document.createElement('div');
-            popup.classList.add('spotify-popup');
-            popup.innerHTML = `
-                <span class="close-button" onclick="closePopup()">&times;</span>
-                <iframe src="https://open.spotify.com/embed/album/${albumId}?utm_source=generator" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            `;
-            document.body.appendChild(popup);
+    <script>
+        function showPopup(id) {
+            document.getElementById(id).style.display = "block";
         }
 
-        function closePopup() {
-            const popup = document.querySelector('.spotify-popup');
-            if (popup) {
-                popup.remove();
-            }
+        function hidePopup(id) {
+            document.getElementById(id).style.display = "none";
         }
     </script>
 </body>
