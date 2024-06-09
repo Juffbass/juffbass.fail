@@ -1,10 +1,18 @@
-/* Move styles to external CSS file */
-/* Styles for original music page */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically */
+}
+
 .album-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
+    width: 100%; /* Ensure full width */
+    max-width: 800px; /* Limit maximum width */
 }
 
 .album-info {
@@ -58,13 +66,15 @@
     background-color: #111; /* Update the background color */
     padding: 40px; /* Increase padding */
     border-radius: 20px; /* Increase border radius */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Update box shadow */
+}
 
 .spotify-popup iframe {
     width: 100%;
     height: 100%; /* Make iframe height 100% */
     border: none;
 }
+
 .close-button {
     position: absolute;
     top: 10px;
