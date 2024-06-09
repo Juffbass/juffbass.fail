@@ -5,7 +5,7 @@ section {
 
 .intro-section {
     background-color: #111; /* color 1 */
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
     flex-direction: row;
