@@ -29,7 +29,7 @@ section {
 }
 
 .section-color2 {
-    background-color: #555; /* color 2 */
+    background-color: #111; /* color 2 */
     transform: skewY(-5deg);
     padding: 60px 20px;
 }
