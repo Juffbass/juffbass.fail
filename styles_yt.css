@@ -49,17 +49,17 @@ section {
     transform: skewY(-5deg);
 }
 
-.video-carousel {
+.video-carousel, .specials-carousel {
     max-width: 80%;
     margin: 0 auto;
     padding: 20px 0; /* Add padding between videos */
 }
 
-.video-wrapper {
+.video-wrapper, .specials-carousel .video-wrapper {
     padding: 0 10px; /* Space between videos */
 }
 
-.video-wrapper iframe {
+.video-wrapper iframe, .specials-carousel .video-wrapper iframe {
     width: 100%;
     height: auto; /* Let the height adjust according to the original aspect ratio */
     border: none;
