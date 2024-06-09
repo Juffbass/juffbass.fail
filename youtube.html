@@ -60,6 +60,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         $(document).ready(function(){
+            // Shuffle the videos in both carousels before initializing Slick
+            function shuffleVideos(carouselSelector) {
+                var carousel = $(carouselSelector);
+                var children = carousel.children();
+                for (var i = children.length; i >= 0; i--) {
+                    carousel.append(children.eq(Math.floor(Math.random() * i)));
+                }
+            }
+
+            shuffleVideos('.video-carousel');
+            shuffleVideos('.specials-carousel');
+
             $('.video-carousel').slick({
                 infinite: true,
                 slidesToShow: 3,
@@ -69,16 +81,14 @@
                 arrows: true
             });
 
-            // Shuffle videos in both carousels
-            function shuffleCarousel(carousel) {
-                var children = carousel.children();
-                for (var i = children.length; i >= 0; i--) {
-                    carousel.append(children.eq(Math.floor(Math.random() * i)));
-                }
-            }
-            
-            shuffleCarousel($('.video-carousel'));
-            shuffleCarousel($('.specials-carousel'));
+            $('.specials-carousel').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true
+            });
         });
     </script>
 </body>
