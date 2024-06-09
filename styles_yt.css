@@ -8,18 +8,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .intro-image {
-    max-width: 40%;
+    max-width: 100%;
     height: auto;
-    margin-right: 20px;
-}
-
-.intro-section p {
-    max-width: 60%;
-    text-align: left;
+    margin-bottom: 20px;
 }
 
 .section-color1 {
