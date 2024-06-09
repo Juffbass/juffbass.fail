@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JuffBass - YouTube</title>
+    <title>JuffBass - Youtube</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles_yt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="icon" href="icon.png">
 </head>
 <body>
@@ -20,13 +22,22 @@
     </nav>
     <div class="content">
         <section class="intro-section">
-            <h1>Welcome to My YouTube Channel</h1>
-            <p>Check out my latest bass covers and enjoy the groove!</p>
+            <img src="Juff2.jpg" alt="Juff" class="intro-image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
         </section>
         <div class="tilted-lines"></div>
         <section class="section-color2">
-            <h2>Latest Videos</h2>
-            <p>Here are some of my latest covers. Enjoy the music!</p>
+            <h2>Popular Videos</h2>
+            <div class="video-carousel">
+                <div><iframe src="https://www.youtube.com/embed/iZ5bZotdYrA" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/J8IHwKMTCAM" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/nLQbrMhVYgY" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/IJKxFRmTy0s" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/paQr34qrZMA" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/ZLY14CZiCS8" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/2x981Kc6ZyM" frameborder="0" allowfullscreen></iframe></div>
+                <div><iframe src="https://www.youtube.com/embed/tn_PasV5tOk" frameborder="0" allowfullscreen></iframe></div>
+            </div>
         </section>
         <div class="tilted-lines"></div>
         <section class="section-color1">
@@ -39,5 +50,19 @@
             <p>Get in touch for collaborations, questions, or just to say hi!</p>
         </section>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.video-carousel').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true
+            });
+        });
+    </script>
 </body>
 </html>
