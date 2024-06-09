@@ -55,6 +55,12 @@ section {
     padding: 20px 0; /* Add padding between videos */
 }
 
+.specials-carousel {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px 0; /* Add padding between videos */
+}
+
 .video-wrapper {
     padding: 0 10px; /* Space between videos */
 }
@@ -120,4 +126,3 @@ body::-webkit-scrollbar {
 .content:hover::-webkit-scrollbar {
     display: block;
 }
- 
