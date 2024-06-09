@@ -9,9 +9,11 @@
     <link rel="icon" href="icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
-  nav .logo {
+        /* Inline styles from original CSS file */
+        nav .logo {
             width: auto;
         }
+
         .album-section {
             display: flex;
             justify-content: space-between;
@@ -20,25 +22,46 @@
         }
 
         .album-info {
-            flex-basis: 48%; /* Adjust to fit two albums in a row with spacing */
+            flex-basis: calc(50% - 10px); /* Adjust to fit two albums in a row with spacing */
             text-align: center;
         }
 
+        .album-info img {
+            max-width: 100%; /* Make album images responsive */
+            height: auto;
+        }
+
         .album-description {
-            margin-left: 20px;
+            margin-top: 10px; /* Adjust spacing */
         }
 
         .album-description h2 {
-            font-size: 20px;
+            font-size: 24px; /* Increase font size for album titles */
             margin-bottom: 10px;
         }
 
         .album-description p {
             margin: 5px 0;
+            font-size: 14px; /* Decrease font size for album descriptions */
         }
 
-        .spotify-embed {
-            display: none;
+        .button-spotify {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px; /* Adjust spacing */
+            cursor: pointer;
+            border-radius: 8px; /* Add border radius */
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+
+        .button-spotify:hover {
+            background-color: #45a049; /* Darker green on hover */
         }
 
         .spotify-popup {
@@ -47,16 +70,25 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: #111; /* Update the background color */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px; /* Increase padding */
+            border-radius: 20px; /* Increase border radius */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Update box shadow */
             z-index: 1000;
         }
 
         .spotify-popup iframe {
             width: 100%;
-            height: 352px;
+            height: 100%; /* Make iframe height 100% */
             border: none;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #FFF;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -78,7 +110,7 @@
                     <h2>Emptiness Reigns</h2>
                     <p>Released: 2023</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor nec nulla commodo auctor.</p>
-                    <button onclick="embedSpotify('4cdUqNAisfdznZOvnKgCJS')">Listen on Spotify</button>
+                    <button class="button-spotify" onclick="embedSpotify('4cdUqNAisfdznZOvnKgCJS')">Listen on Spotify</button>
                 </div>
             </div>
             <div id="spotifyEmbed1" class="spotify-embed"></div>
@@ -162,7 +194,5 @@
             }
         }
     </script>
-</body>
-</html>
 </body>
 </html>
