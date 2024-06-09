@@ -29,14 +29,7 @@
         <section class="section-color2">
             <h2>Popular Videos</h2>
             <div class="video-carousel">
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/iZ5bZotdYrA" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/J8IHwKMTCAM" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/nLQbrMhVYgY" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/IJKxFRmTy0s" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/paQr34qrZMA" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ZLY14CZiCS8" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/2x981Kc6ZyM" frameborder="0" allowfullscreen></iframe></div>
-                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/tn_PasV5tOk" frameborder="0" allowfullscreen></iframe></div>
+                <!-- Your popular videos -->
             </div>
         </section>
         <div class="tilted-lines"></div>
@@ -46,6 +39,13 @@
         </section>
         <div class="tilted-lines"></div>
         <section class="section-color2">
+            <h2>Specials</h2>
+            <div class="video-carousel specials-carousel">
+                <!-- Your special videos -->
+            </div>
+        </section>
+        <div class="tilted-lines"></div>
+        <section class="section-color1">
             <h2>Contact Me</h2>
             <p>Get in touch for collaborations, questions, or just to say hi!</p>
         </section>
@@ -62,8 +62,16 @@
                 autoplaySpeed: 2000,
                 arrows: true
             });
+            
+            // Shuffle videos in both carousels
+            var carousels = $(".video-carousel");
+            carousels.each(function() {
+                var carousel = $(this);
+                for (var i = carousel.children().length; i >= 0; i--) {
+                    carousel.append(carousel.children().eq(Math.floor(Math.random() * i)));
+                }
+            });
         });
     </script>
 </body>
 </html>
- 
