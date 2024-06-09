@@ -61,8 +61,7 @@ section {
 
 .video-wrapper iframe {
     width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 315px; /* Set to 315px for a 560x315 aspect ratio which is 16:9 */
     border: none;
 }
 
@@ -90,7 +89,7 @@ section {
     color: #fff;
 }
 
-/* scrollbox code for dummy me to find*/
+/* scrollbox code for dummy me to find */
 .content {
     padding: 80px 20px;
     min-height: 100vh;
