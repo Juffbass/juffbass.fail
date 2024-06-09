@@ -9,13 +9,17 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding: 40px 20px;
 }
 
 .intro-image {
     max-width: 40%;
     height: auto;
     margin-right: 20px;
+}
+
+.intro-section p {
+    max-width: 60%;
+    text-align: left;
 }
 
 .section-color1 {
@@ -50,15 +54,13 @@ section {
     margin: 0 auto;
 }
 
-.video-carousel .video-item {
-    position: relative;
-    cursor: pointer;
+.video-carousel div {
     outline: none; /* Prevents blue border on click */
 }
 
-.video-carousel .video-item img {
+.video-carousel iframe {
     width: 100%;
-    height: auto;
+    height: 315px;
 }
 
 .slick-prev, .slick-next {
@@ -84,6 +86,10 @@ section {
 .slick-dots li.slick-active button:before {
     color: #fff;
 }
+
+
+
+/* scrollbox */
 .content {
     padding: 80px 20px;
     min-height: 100vh;
