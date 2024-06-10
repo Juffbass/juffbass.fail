@@ -69,7 +69,8 @@ nav ul li a:hover {
 }
 
 .countdown-box h2 {
-    font-family: 'Lora', serif;
+    font-family: 'Lora', serif; /* Keeping the serif font for Myrkur */
+    font-size: 2rem; /* Adjust font size as needed */
     margin-bottom: 10px;
 }
 
@@ -79,14 +80,14 @@ nav ul li a:hover {
     background-color: #888;
     color: #ffffff;
     text-decoration: none;
-    border: 2px solid #ffffff;
     border-radius: 8px;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    font-family: 'Open Sans', sans-serif; /* Changed to Open Sans */
+    font-weight: bold;
 }
 
 .listen-btn:hover {
-    background-color: #888;
-    border-color: #888;
+    background-color: #777;
 }
 
 /* Footer Styling */
@@ -153,10 +154,7 @@ footer {
     background: #777;
 }
 
+/* Ensure scrollbar is always visible */
 body::-webkit-scrollbar {
-    display: none;
-}
-
-.content:hover::-webkit-scrollbar {
     display: block;
 }
