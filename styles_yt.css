@@ -4,7 +4,7 @@ section {
 }
 
 .intro-section {
-    background-color: #333; /* color 1 */
+    background-color: #111 /* color 1 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,13 +23,13 @@ section {
 }
 
 .section-color1 {
-    background-color: #333333; /* color 1 */
+    background-color: #111; /* color 1 */
     transform: skewY(-5deg);
     padding: 60px 20px;
 }
 
 .section-color2 {
-    background-color: #111111; /* color 2 */
+    background-color: #333; /* color 2 */
     transform: skewY(-5deg);
     padding: 60px 20px;
 }
