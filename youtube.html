@@ -5,34 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JuffBass - Youtube</title>
     
-       <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles_yt.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="icon" href="icon.png">
 </head>
 <body>
-   <nav>
+    <nav>
         <img src="juffbass.png" alt="Logo" class="logo">
         <ul>
             <li><a href="main.html">Home</a></li>
             <li><a href="autobio.html">About</a></li>
             <li><a href="music.html">Originals</a></li>
             <li><a href="youtube.html">YouTube</a></li>
-<li><a href="extras.html">Extras</a></li>
+            <li><a href="extras.html">Extras</a></li>
         </ul>
     </nav>
     <div class="content">
         <section class="intro-section">
             <img src="yt.png" alt="Juff" class="intro-image">
-            <p> <em>The Juffbass YouTube channel has been around since February 2012, providing bass covers along with tabs for new bassists to learn and master the 
-instrument's part of their favorite songs. He created a loving community of 43k bass players and ever since posted ~ 300 fun and informative videos.</em> </p>
+            <p><em>The Juffbass YouTube channel has been around since February 2012, providing bass covers along with tabs for new bassists to learn and master the instrument's part of their favorite songs. He created a loving community of 43k bass players and ever since posted ~ 300 fun and informative videos.</em></p>
         </section>
         <div class="tilted-lines"></div>
         <section class="section-color2">
             <h2>Popular Videos</h2>
             <div class="video-carousel">
-              <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/iZ5bZotdYrA" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/iZ5bZotdYrA" frameborder="0" allowfullscreen></iframe></div>
                 <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/J8IHwKMTCAM" frameborder="0" allowfullscreen></iframe></div>
                 <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/nLQbrMhVYgY" frameborder="0" allowfullscreen></iframe></div>
                 <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/IJKxFRmTy0s" frameborder="0" allowfullscreen></iframe></div>
@@ -68,18 +67,6 @@ instrument's part of their favorite songs. He created a loving community of 43k 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         $(document).ready(function(){
-            // Shuffle the videos in both carousels before initializing Slick
-            function shuffleVideos(carouselSelector) {
-                var carousel = $(carouselSelector);
-                var children = carousel.children();
-                for (var i = children.length; i > 0; i--) {
-                    carousel.append(children.eq(Math.floor(Math.random() * i)));
-                }
-            }
-
-            shuffleVideos('.video-carousel');
-            shuffleVideos('.specials-carousel');
-
             $('.video-carousel').slick({
                 infinite: true,
                 slidesToShow: 3,
