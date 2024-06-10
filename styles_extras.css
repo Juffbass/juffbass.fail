@@ -44,7 +44,7 @@ nav ul li a {
 .section-title {
     font-family: 'Kanit', sans-serif;
     font-size: 2rem;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 
 .pocket {
@@ -71,9 +71,6 @@ nav ul li a {
     left: 10px;
     font-size: 1.5rem;
     font-family: 'Kanit', sans-serif;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px 10px;
-    border-radius: 5px;
 }
 
 .pocket-content {
@@ -86,6 +83,9 @@ nav ul li a {
     border: 2px solid #fff;
     border-radius: 5px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pocket-content img {
@@ -97,5 +97,18 @@ nav ul li a {
 }
 
 .pocket:hover .pocket-content img {
-    filter: blur(3px);
+    filter: blur(2px);
+}
+
+.overlay {
+    position: absolute;
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
