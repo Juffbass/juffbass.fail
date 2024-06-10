@@ -4,22 +4,28 @@ section {
 }
 
 .intro-section {
-    background-color: #111 /* color 1 */
+    background-color: #111; /* color 1 */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    padding: 60px 20px; /* Added padding for better spacing */
 }
 
 .intro-image {
     max-width: 40%;
     height: auto;
     margin-right: 20px;
+    border-radius: 10px; /* Added rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added box shadow for better visual appearance */
 }
 
 .intro-section p {
     max-width: 60%;
     text-align: left;
+    font-size: 1.1em; /* Increased font size for better readability */
+    line-height: 1.6; /* Improved line height for better readability */
+    color: #ddd; /* Changed text color for better contrast */
 }
 
 .section-color1 {
@@ -36,10 +42,12 @@ section {
 
 .section-color1 h2, .section-color2 h2 {
     transform: skewY(5deg);
+    color: #fff; /* Changed heading color for better contrast */
 }
 
 .section-color1 p, .section-color2 p {
     transform: skewY(5deg);
+    color: #ddd; /* Changed paragraph text color for better contrast */
 }
 
 .tilted-lines {
