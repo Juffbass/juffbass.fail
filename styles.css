@@ -105,6 +105,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .footer-icons img {
@@ -114,6 +115,11 @@ footer {
 
 .footer-icons img:hover {
     transform: scale(1.1);
+}
+
+footer p {
+    color: #ffffff;
+    font-size: 0.9rem;
 }
 
 /* Media Queries */
@@ -137,6 +143,7 @@ footer {
     min-height: 100vh;
 }
 
+/* Webkit-based browsers */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -154,7 +161,23 @@ footer {
     background: #777;
 }
 
-/* Ensure scrollbar is always visible */
+/* Ensure the scrollbar is always visible in Webkit-based browsers */
 body::-webkit-scrollbar {
     display: block;
 }
+
+
+body {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #555 #111; 
+}
+
+body:hover {
+    scrollbar-color: #777 #111;
+}
+
+/* For Internet Explorer and Edge (Legacy) */
+body {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* IE 10+ */
+}
+
