@@ -17,6 +17,7 @@ nav {
 nav .logo {
     height: 40px;
     margin-right: auto;
+}
 
 nav ul {
     list-style: none;
@@ -111,4 +112,43 @@ nav ul li a {
     padding: 10px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+/* Media Query for Responsive Design */
+
+/* Mobile devices (portrait and landscape) */
+@media only screen and (max-width: 600px) {
+    .content {
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .pocket {
+        width: 80%;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .pocket-title {
+        font-size: 1.2rem;
+        top: 5px;
+        left: 5px;
+    }
+
+    .pocket-content {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .pocket-content img {
+        border-radius: 0;
+    }
+
+    .overlay {
+        font-size: 1rem;
+    }
 }
