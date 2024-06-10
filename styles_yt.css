@@ -1,157 +1,92 @@
+
+
 section {
     padding: 40px 20px;
     text-align: center;
 }
 
 .intro-section {
-    background-color: #111; /* color 1 */
+    background-color: #111; 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding: 60px 20px; /* Added padding for better spacing */
+    padding: 60px 20px; 
 }
 
 .intro-image {
     max-width: 40%;
     height: auto;
     margin-right: 20px;
-    border-radius: 10px; /* Added rounded corners for the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added box shadow for better visual appearance */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .intro-section p {
     max-width: 60%;
     text-align: left;
-    font-size: 1.1em; /* Increased font size for better readability */
-    line-height: 1.6; /* Improved line height for better readability */
-    color: #ddd; /* Changed text color for better contrast */
+    font-size: 1.1em; 
+    line-height: 1.6; 
+    color: #ddd; 
 }
 
-.section-color1 {
-    background-color: #111; /* color 1 */
-    transform: skewY(-5deg);
-    padding: 60px 20px;
+
+
+.intro-section {
+    flex-direction: column;
 }
 
-.section-color2 {
-    background-color: #333; /* color 2 */
-    transform: skewY(-5deg);
-    padding: 60px 20px;
+.intro-image {
+    max-width: 60%; 
+    margin-right: 0;
+    margin-bottom: 20px; 
 }
 
-.section-color1 h2, .section-color2 h2 {
-    transform: skewY(5deg);
-    color: #fff; /* Changed heading color for better contrast */
-}
-
-.section-color1 p, .section-color2 p {
-    transform: skewY(5deg);
-    color: #ddd; /* Changed paragraph text color for better contrast */
-}
-
-.tilted-lines {
-    height: 10px;
-    background: linear-gradient(to right, #333 25%, transparent 25%, transparent 75%, #333 75%);
-    background-size: 40px 10px;
-    transform: skewY(-5deg);
-}
-
-.video-carousel {
+.intro-section p {
     max-width: 80%;
-    margin: 0 auto;
-    padding: 20px 0; /* Add padding between videos */
-}
-
-.video-wrapper {
-    padding: 0 10px; /* Space between videos */
-}
-
-.video-wrapper iframe {
-    width: 100%;
-    height: auto; /* Let the height adjust according to the original aspect ratio */
-    border: none;
-}
-
-.slick-prev, .slick-next {
-    color: #fff;
-    font-size: 30px;
-    line-height: 1;
-    opacity: 0.75;
-    transition: opacity 0.3s;
-}
-
-.slick-prev:hover, .slick-next:hover {
-    opacity: 1;
-}
-
-.slick-prev::before, .slick-next::before {
-    color: #fff;
-}
-
-.slick-dots li button:before {
-    color: #fff;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #fff;
-}
-
-/* scrollbox code for dummy me to find */
-.content {
-    padding: 80px 20px;
-    min-height: 100vh;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #111;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #555;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #777;
-}
-
-/* Ensure scrollbar is always visible */
-body::-webkit-scrollbar {
-    display: block;
-}
-/* Footer Styling */
-footer {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1rem 0;
+    font-size: 1.2em; 
     text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-.footer-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+/* Media queries */
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    .intro-image {
+        max-width: 80%; 
+    }
+
+    .intro-section p {
+        max-width: 90%; 
+    }
 }
 
-.footer-icons img {
-    height: 40px;
-    transition: transform 0.3s ease;
+/* Tablets */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .intro-image {
+        max-width: 70%; 
+
+    .intro-section p {
+        max-width: 80%; 
+    }
 }
 
-.footer-icons img:hover {
-    transform: scale(1.1);
+/* Laptops and Desktops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .intro-image {
+        max-width: 50%; 
+
+    .intro-section p {
+        max-width: 70%; 
+    }
 }
 
-footer p {
-    color: #ffffff;
-    font-size: 0.9rem;
+/* Larger Screens */
+@media only screen and (min-width: 1025px) {
+    .intro-image {
+        max-width: 40%; 
+
+    .intro-section p {
+        max-width: 60%; 
+    }
 }
