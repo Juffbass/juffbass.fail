@@ -23,13 +23,13 @@ nav {
 
 nav .logo {
     height: 40px;
-    margin-right: auto;
-}
+    margin-right: auto; 
 
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    gap: 1rem;
+    margin-left: auto; 
 }
 
 nav ul li {
