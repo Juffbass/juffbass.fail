@@ -77,56 +77,41 @@ nav ul li a {
     display: inline-block;
 }
 
-.spotify-icon {
+.streaming-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.streaming-icon, .spotify-icon {
     width: 24px;
     height: auto;
-    margin-left: 1rem;
     cursor: pointer;
 }
 
-.popup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    background-color: #111;
 }
 
-.popup-content {
-    background-color: #111;
-    margin: 10% auto;
+.footer-icons img {
+    width: 24px;
+    height: auto;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
     padding: 1rem;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 800px;
+    background-color: #111;
+    color: #fff;
     position: relative;
 }
 
-.popup-content iframe {
-    width: 90%;
-    height: 400px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-}
-
-.close:hover,
-.close:focus {
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-}
 .content {
     padding: 80px 20px;
     min-height: 100vh;
@@ -152,4 +137,118 @@ nav ul li a {
 /* Ensure scrollbar is always visible */
 body::-webkit-scrollbar {
     display: block;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile devices (portrait and landscape) */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 1rem;
+    }
+
+    .album-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .album-cover {
+        margin-bottom: 1rem;
+        width: 80%;
+    }
+
+    .album-info {
+        max-width: 100%;
+    }
+
+    .album-title {
+        font-size: 1.5rem;
+    }
+
+    .listen-now {
+        margin-top: 1rem;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .album-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .album-cover {
+        margin-bottom: 1rem;
+        width: 60%;
+    }
+
+    .album-info {
+        max-width: 100%;
+    }
+
+    .album-title {
+        font-size: 1.75rem;
+    }
+
+    .listen-now {
+        margin-top: 1rem;
+    }
+}
+
+/* Laptops and Desktops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .album-cover {
+        width: 150px;
+    }
+
+    .album-info {
+        max-width: 70%;
+    }
+
+    .album-title {
+        font-size: 1.75rem;
+    }
+
+    .listen-now {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .streaming-icon, .spotify-icon {
+        width: 20px;
+    }
+}
+
+/* Larger Screens */
+@media only screen and (min-width: 1025px) {
+    .album-cover {
+        width: 200px;
+    }
+
+    .album-info {
+        max-width: 600px;
+    }
+
+    .album-title {
+        font-size: 2rem;
+    }
+
+    .listen-now {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .streaming-icon, .spotify-icon {
+        width: 24px;
+    }
 }
