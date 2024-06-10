@@ -120,10 +120,7 @@ section {
     background: #777;
 }
 
+/* Ensure scrollbar is always visible */
 body::-webkit-scrollbar {
-    display: none;
-}
-
-.content:hover::-webkit-scrollbar {
     display: block;
 }
