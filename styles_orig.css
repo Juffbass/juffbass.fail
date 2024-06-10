@@ -127,3 +127,29 @@ nav ul li a {
     text-decoration: none;
     cursor: pointer;
 }
+.content {
+    padding: 80px 20px;
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Ensure scrollbar is always visible */
+body::-webkit-scrollbar {
+    display: block;
+}
