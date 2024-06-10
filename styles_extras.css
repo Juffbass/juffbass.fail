@@ -127,9 +127,9 @@ nav ul li a {
     }
 
     .pocket {
-        width: 80%;
+        width: 100%;
         height: auto;
-        margin: 1rem auto;
+        margin: 1rem 0;
     }
 
     .pocket-title {
@@ -151,11 +151,6 @@ nav ul li a {
         height: auto;
         object-fit: cover;
     }
-
-    .overlay {
-        font-size: 1rem;
-    }
-}
 
     .overlay {
         font-size: 1rem;
