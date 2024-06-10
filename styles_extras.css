@@ -114,10 +114,9 @@ nav ul li a {
     transform: translateY(-50%);
 }
 
-/* Media Query for Responsive Design */
+/* Media Query */
 
 /* Mobile devices */
-@media only screen and (max-width: 600px) {
 @media only screen and (max-width: 600px) {
     .content {
         padding: 1rem;
