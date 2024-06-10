@@ -116,7 +116,7 @@ nav ul li a {
 
 /* Media Query for Responsive Design */
 
-/* Mobile devices (portrait and landscape) */
+/* Mobile devices */
 @media only screen and (max-width: 600px) {
     .content {
         padding: 1rem;
@@ -129,7 +129,7 @@ nav ul li a {
     .pocket {
         width: 80%;
         height: auto;
-        margin: 1rem 0;
+        margin: 1rem auto;
     }
 
     .pocket-title {
@@ -146,6 +146,8 @@ nav ul li a {
 
     .pocket-content img {
         border-radius: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .overlay {
